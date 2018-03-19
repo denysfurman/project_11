@@ -16,7 +16,7 @@
   }
   @else if $media == lg {
     @media (min-width: 1201px) and (max-width: 1650px) { @content; }
-  }
+}
   @else if $media == lg_h {
     @media (min-width: 1201px) and (max-width: 1650px) and (max-height: 768px) { @content; }
   }
