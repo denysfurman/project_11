@@ -1,0 +1,73 @@
+.global-library{
+	&__content{
+		overflow: hidden;
+		max-height: 710px;
+		&.active{
+			max-height: none;
+			overflow: visible;
+		}
+	}
+	&__col{
+		margin-bottom: 20px;
+	}
+	&__container{
+		background: #fff;
+		border: 1px solid #e9e9e9;
+		border-radius: 0 38px 38px 0;
+		height: 100%;
+	}
+	&__footer,
+	&__header{
+		display: flex;
+	}
+	&__user{
+		flex: 0 0 185px;
+		max-width: 185px;
+		border-bottom: 1px solid #e9e9e9;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		font-size: 16px;
+		flex-direction: column;
+		padding: 15px;
+	}
+	&__image{
+		margin-bottom: 10px;
+	}
+	&__id{
+		font-weight: 700;
+		margin-bottom: 15px;
+	}
+	&__info{
+		width: 100%;
+	}
+	.comments__item{
+		margin-bottom: 0;
+		border-top: none;
+		border-right: none;
+		padding-top: 20px;
+		padding-left: 19px;
+	}
+	.faq__author{
+		flex: 0 0 185px;
+		max-width: 185px;
+		padding: 15px;
+		margin-right: 0;
+	}
+	&__description{
+		padding: 8px 35px 15px 17px;
+		border-left: 1px solid #e9e9e9;
+		font-size: 16px;
+		line-height: 1.85;
+		p{
+			margin-bottom: 0;
+		}
+	}
+	&__link{
+		color: $color_brand;
+		display: flex;
+		justify-content: flex-end;
+	}
+}

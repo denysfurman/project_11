@@ -1,0 +1,241 @@
+extend includes/base/head
+block head
+	main.wrapper.wrapper_not-front
+		.wrapper__content
+			include includes/base/header.pug
+			.wrapper__middle
+				include includes/base/navigation.pug
+				.container-fluid
+					.breadcrumbs
+						a.breadcrumbs__link.breadcrumbs__link_home(href="home.html") Home
+						span.breadcrumbs__sep /
+						span.breadcrumbs__this Course
+					.course-page
+						include includes/home/home_filter.pug
+						.course-page__content
+							.course-page__wrap
+								table.base-table
+									thead
+										tr
+											th.base-table__id ID
+											th.base-table__name Course name
+											th.base-table__teacher.base-table__asc Teacher
+											th.base-table__date.base-table__asc Initialize date
+											th.base-table__class Clasification
+											th.base-table__section Sections
+											th.base-table__lesson Lessons
+											th.base-table__register.base-table__asc Registered
+											th.base-table__current Currently studing
+											th.base-table__passed Passed
+											th.base-table__status Status
+									tbody
+										tr
+											td.base-table__id 8564789
+											td.base-table__name 
+												a(href="#") Course 1
+											td.base-table__teacher Ahmed
+											td.base-table__date 10 feb 2017
+											td.base-table__class Managament / Human Resourse Management
+											td.base-table__section 5
+											td.base-table__lesson 40
+											td.base-table__register 350
+											td.base-table__current 100
+											td.base-table__passed 100
+											td.base-table__status Active
+										tr
+											td.base-table__id 8564788
+											td.base-table__name 
+												a(href="#") Course 2
+											td.base-table__teacher Omar
+											td.base-table__date 12 feb 2017
+											td.base-table__class Economics / Banking Economics
+											td.base-table__section 3
+											td.base-table__lesson 3
+											td.base-table__register 100
+											td.base-table__current 50
+											td.base-table__passed 80
+											td.base-table__status closed
+										tr
+											td.base-table__id 8564789
+											td.base-table__name 
+												a(href="#") Course 1
+											td.base-table__teacher Ahmed
+											td.base-table__date 10 feb 2017
+											td.base-table__class Managament / Human Resourse Management
+											td.base-table__section 5
+											td.base-table__lesson 40
+											td.base-table__register 350
+											td.base-table__current 100
+											td.base-table__passed 100
+											td.base-table__status Active
+										tr
+											td.base-table__id 8564788
+											td.base-table__name 
+												a(href="#") Course 2
+											td.base-table__teacher Omar
+											td.base-table__date 12 feb 2017
+											td.base-table__class Economics / Banking Economics
+											td.base-table__section 3
+											td.base-table__lesson 3
+											td.base-table__register 100
+											td.base-table__current 50
+											td.base-table__passed 80
+											td.base-table__status closed
+										tr
+											td.base-table__id 8564789
+											td.base-table__name 
+												a(href="#") Course 1
+											td.base-table__teacher Ahmed
+											td.base-table__date 10 feb 2017
+											td.base-table__class Managament / Human Resourse Management
+											td.base-table__section 5
+											td.base-table__lesson 40
+											td.base-table__register 350
+											td.base-table__current 100
+											td.base-table__passed 100
+											td.base-table__status Active
+										tr
+											td.base-table__id 8564788
+											td.base-table__name 
+												a(href="#") Course 2
+											td.base-table__teacher Omar
+											td.base-table__date 12 feb 2017
+											td.base-table__class Economics / Banking Economics
+											td.base-table__section 3
+											td.base-table__lesson 3
+											td.base-table__register 100
+											td.base-table__current 50
+											td.base-table__passed 80
+											td.base-table__status closed
+										tr
+											td.base-table__id 8564789
+											td.base-table__name 
+												a(href="#") Course 1
+											td.base-table__teacher Ahmed
+											td.base-table__date 10 feb 2017
+											td.base-table__class Managament / Human Resourse Management
+											td.base-table__section 5
+											td.base-table__lesson 40
+											td.base-table__register 350
+											td.base-table__current 100
+											td.base-table__passed 100
+											td.base-table__status Active
+										tr
+											td.base-table__id 8564788
+											td.base-table__name 
+												a(href="#") Course 2
+											td.base-table__teacher Omar
+											td.base-table__date 12 feb 2017
+											td.base-table__class Economics / Banking Economics
+											td.base-table__section 3
+											td.base-table__lesson 3
+											td.base-table__register 100
+											td.base-table__current 50
+											td.base-table__passed 80
+											td.base-table__status closed
+										tr
+											td.base-table__id 8564789
+											td.base-table__name 
+												a(href="#") Course 1
+											td.base-table__teacher Ahmed
+											td.base-table__date 10 feb 2017
+											td.base-table__class Managament / Human Resourse Management
+											td.base-table__section 5
+											td.base-table__lesson 40
+											td.base-table__register 350
+											td.base-table__current 100
+											td.base-table__passed 100
+											td.base-table__status Active
+										tr
+											td.base-table__id 8564788
+											td.base-table__name 
+												a(href="#") Course 2
+											td.base-table__teacher Omar
+											td.base-table__date 12 feb 2017
+											td.base-table__class Economics / Banking Economics
+											td.base-table__section 3
+											td.base-table__lesson 3
+											td.base-table__register 100
+											td.base-table__current 50
+											td.base-table__passed 80
+											td.base-table__status closed
+										tr
+											td.base-table__id 8564789
+											td.base-table__name 
+												a(href="#") Course 1
+											td.base-table__teacher Ahmed
+											td.base-table__date 10 feb 2017
+											td.base-table__class Managament / Human Resourse Management
+											td.base-table__section 5
+											td.base-table__lesson 40
+											td.base-table__register 350
+											td.base-table__current 100
+											td.base-table__passed 100
+											td.base-table__status Active
+										tr
+											td.base-table__id 8564788
+											td.base-table__name 
+												a(href="#") Course 2
+											td.base-table__teacher Omar
+											td.base-table__date 12 feb 2017
+											td.base-table__class Economics / Banking Economics
+											td.base-table__section 3
+											td.base-table__lesson 3
+											td.base-table__register 100
+											td.base-table__current 50
+											td.base-table__passed 80
+											td.base-table__status closed
+										tr
+											td.base-table__id 8564789
+											td.base-table__name 
+												a(href="#") Course 1
+											td.base-table__teacher Ahmed
+											td.base-table__date 10 feb 2017
+											td.base-table__class Managament / Human Resourse Management
+											td.base-table__section 5
+											td.base-table__lesson 40
+											td.base-table__register 350
+											td.base-table__current 100
+											td.base-table__passed 100
+											td.base-table__status Active
+										tr
+											td.base-table__id 8564788
+											td.base-table__name 
+												a(href="#") Course 2
+											td.base-table__teacher Omar
+											td.base-table__date 12 feb 2017
+											td.base-table__class Economics / Banking Economics
+											td.base-table__section 3
+											td.base-table__lesson 3
+											td.base-table__register 100
+											td.base-table__current 50
+											td.base-table__passed 80
+											td.base-table__status closed
+										tr
+											td.base-table__id 8564789
+											td.base-table__name 
+												a(href="#") Course 1
+											td.base-table__teacher Ahmed
+											td.base-table__date 10 feb 2017
+											td.base-table__class Managament / Human Resourse Management
+											td.base-table__section 5
+											td.base-table__lesson 40
+											td.base-table__register 350
+											td.base-table__current 100
+											td.base-table__passed 100
+											td.base-table__status Active
+										tr
+											td.base-table__id 8564788
+											td.base-table__name 
+												a(href="#") Course 2
+											td.base-table__teacher Omar
+											td.base-table__date 12 feb 2017
+											td.base-table__class Economics / Banking Economics
+											td.base-table__section 3
+											td.base-table__lesson 3
+											td.base-table__register 100
+											td.base-table__current 50
+											td.base-table__passed 80
+											td.base-table__status closed
+							include includes/pager.pug
+		include includes/base/footer.pug

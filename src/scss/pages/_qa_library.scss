@@ -1,0 +1,50 @@
+.base-table{
+	&_library{
+		th{
+			padding: 0 50px;
+			background-color: $color_brand !important;
+			color: #fff;
+			background: url('../images/sort_arrow2.png') right 10px center no-repeat $color_brand;
+			&.base-table__asc{
+				background: url('../images/sort_arrow_asc2.png') right 10px center no-repeat $color_brand;
+			}
+			.windows &{
+				padding: 4px 50px 0;
+			}
+			&:nth-child(1){
+				width: 7.6%;
+				text-align: center;
+			}
+			&:nth-child(2){
+				width: 25.4%;
+			}
+			&:nth-child(3){
+				width: 15.2%;
+			}
+			&:nth-child(4){
+				width: 15.2%;
+			}
+			&:nth-child(5){
+				width: 15.2%;
+			}
+		}
+		td{
+			padding: 0 50px;
+			.windows &{
+				padding: 4px 50px 0;
+			}
+			&:nth-child(1){
+				text-align: center;
+			}
+		}
+	}
+}
+
+.library__wrap{
+	@include media(tab){
+		overflow-y: auto;
+	}
+	@include media(phone){
+		overflow-y: auto;
+	}
+}

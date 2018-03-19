@@ -1,0 +1,112 @@
+extend includes/base/head
+block head
+	main.wrapper.wrapper_not-front
+		.wrapper__content.wrapper__content_backing
+			include includes/base/header.pug
+			.wrapper__middle
+				include includes/base/navigation.pug
+				.container-fluid
+					.breadcrumbs
+						a.breadcrumbs__link.breadcrumbs__link_home(href="home.html") Home
+						span.breadcrumbs__sep /
+						span.breadcrumbs__this Certificates
+					.certificates
+						form.filter.filter_certificates
+							.certificates__label Select by:
+							.certificates__wrap
+								.filter__item_certificates
+									- var x = 5;
+									label.item-label Certificate date
+									select
+										- for (var i=1; i<=x; i++) {
+											option(value="Year / Month")='Year / Month'
+										- }
+								.filter__item_certificates
+									label.item-label Course name
+									select
+										- for (var i=1; i<=x; i++) {
+											option(value="Course #" + i)='Course #' + i
+										- }
+								.filter__item_certificates
+									label.item-label Student name
+									select
+										- for (var i=1; i<=x; i++) {
+											option(value="Student #" + i)='Student #' + i 
+										- }
+						.library__content
+							.library__wrap
+								table.base-table.base-table_certificates
+									thead
+										tr
+											th.base-table__id.base-table__cerificates ID
+											th.base-table__name.base-table__cerificates Question title
+											th.base-table__teacher.base-table__cerificates.base-table__asc Number of certificates
+											th.base-table__date.base-table__cerificates.base-table__asc Courses
+											th.base-table__class.base-table__cerificates View certificates
+											th.base-table__section.base-table__cerificates Views
+									tbody
+										- var count = 25;
+										- for (var i = 1; i <= count; i++){
+											if i % 2 == 0
+												tr.main-tr.main-tr__even
+													td.base-table__id.base-table__cerificates 8564789
+													td.base-table__student.base-table__cerificates='Student ' + i
+													td.base-table__number.base-table__cerificates
+														a(href="#")="Course " + i
+													td.base-table__courses.base-table__cerificates
+														a(href="#") Course 1, Course 2, Course 3
+													td.base-table__view.base-table__cerificates
+														button(type="button").certificates__btn View
+													td.base-table__section.base-table__cerificates.base-table__section_sertificates 10 000 000
+												tr.certificates-dropdown
+													td.certificates-dropdown__td(colspan="6")
+														.certificates-dropdown__wrap
+															.certificates-dropdown__images
+																img.certificates-dropdown__img(
+																	src="../images/certificate_1.jpg"
+																	alt=""
+																)
+																img.certificates-dropdown__img(
+																	src="../images/certificate_1.jpg"
+																	alt=""
+																)
+																img.certificates-dropdown__img(
+																	src="../images/certificate_1.jpg"
+																	alt=""
+																)
+															.certificates-dropdown__footer
+																.certificates-dropdown_arrows
+																a.certificates-dropdown__print(href="#") Print
+											else
+												tr.main-tr.main-tr_odd
+													td.base-table__id.base-table__cerificates 8564789
+													td.base-table__student.base-table__cerificates='Student ' + i
+													td.base-table__number.base-table__cerificates
+														a(href="#")="Course " + i
+													td.base-table__courses.base-table__cerificates
+														a(href="#") Course 1, Course 2, Course 3
+													td.base-table__view.base-table__cerificates
+														button(type="button").certificates__btn View
+													td.base-table__section.base-table__cerificates.base-table__section_sertificates 10 000 000
+												tr.certificates-dropdown
+													td.certificates-dropdown__td(colspan="6")
+														.certificates-dropdown__wrap
+															.certificates-dropdown__images
+																img.certificates-dropdown__img(
+																	src="../images/certificate_1.jpg"
+																	alt=""
+																)
+																img.certificates-dropdown__img(
+																	src="../images/certificate_1.jpg"
+																	alt=""
+																)
+																img.certificates-dropdown__img(
+																	src="../images/certificate_1.jpg"
+																	alt=""
+																)
+															.certificates-dropdown__footer
+																.certificates-dropdown_arrows
+																a.certificates-dropdown__print(href="#") Print
+										- }
+							include includes/pager.pug
+		include includes/base/footer.pug

@@ -1,0 +1,92 @@
+.pagination{
+	display: table;
+	margin: 9px auto 0;
+	&__content{
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		margin-bottom: 0;
+	}
+	&__item{
+		list-style: none;
+		font-size: 18px;
+		&_arrow{
+			align-self: center;
+		}
+	}
+	&__arrow{
+		&_next,
+		&_prev{
+			text-decoration: none !important;
+			width: 18px;
+			height: 13px;
+			display: block;
+			text-indent: -9999px;
+			position: relative;
+			&::after{
+				@include font;
+				font-size: 18px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				text-indent: 0;
+				transition: .4s;
+			}
+			&:hover{
+				&::after{
+					color: $color_submit;
+				}
+			}
+		}
+		&_next{
+			margin-left: 14px;
+			&::after{
+				content: '\e906';
+			}
+		}
+		&_prev{
+			margin-right: 14px;
+			&::after{
+				transform: rotate(180deg);
+				content: '\e906';
+			}
+		}
+	}
+	&__link{
+		display: block;
+		width: 34px;
+		height: 34px;
+		border-radius: 50%;
+		display: flex;
+		line-height: 34px;
+		justify-content: center;
+		margin: 0 4px;
+		transition: .4s;
+		.windows &{
+			line-height: 38px;
+		}
+		&:hover{
+			text-decoration: none;
+			color: $color_submit;
+		}
+		@include media(phone){
+			margin: 0 1px;
+		}
+		&_current{
+			color: #fff !important;
+			background: $color_submit;
+			box-shadow: 5px 3px 8px rgba(0, 0, 0, 0.15);
+		}
+	}
+	&__dots{
+		display: block;
+		width: 34px;
+		height: 34px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 4px;
+		text-decoration: none !important;
+	}
+}

@@ -1,0 +1,57 @@
+extend includes/base/head
+block head
+	main.wrapper.wrapper_not-front
+		.wrapper__content.wrapper__content_backing
+			include includes/base/header.pug
+			.wrapper__middle
+				include includes/base/navigation.pug
+				.container-fluid
+					.breadcrumbs
+						a.breadcrumbs__link.breadcrumbs__link_home(href="home.html") Home
+						span.breadcrumbs__sep /
+						span.breadcrumbs__this Articles
+					.articles
+						form.articles-filter
+							.articles-filter__wrap
+								.articles-filter__title Type a new article
+								.articles-filter__label Sort
+								.articles-filter__item
+									select
+										option(value="Latest Articles")='Latest Articles'
+										option(value="Subject")='Subject'
+										option(value="Most Viewed")='Most Viewed'
+							//- .articles-filter__display
+							//- 	a.articles-filter__table.active(href="#")
+							//- 	a.articles-filter__list(href="#")
+						.articles__content.row
+							- var x = 8;
+							- for (var i=1; i<=x; i++) {
+								.articles__col.col-xl-6
+									.articles__container
+										a.articles__image
+											img.articles__img(
+												src='../images/article_' +  i + '.jpg',
+												alt=""
+											)
+										.articles__body
+											.articles-header
+												.articles-header__author
+													.articles-header__image
+														img.articles-header__img(
+															src="../images/article_author.png"
+														)
+													.articles-header__body
+														.articles-header__post Supervisor
+														.articles-header__name Jenny Doe
+												.articles-header__view 3105 
+												.articles-header__comments 350
+												.articles-header__shares 350
+											h2.articles__title Lorem Ipsum is simply dummy text of the printing 
+											.articles__description It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content
+											a.articles__btn(
+												href="#"
+											) Read more
+							- }
+					include includes/pager.pug
+
+		include includes/base/footer.pug
