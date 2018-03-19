@@ -1,0 +1,36 @@
+.global{
+	&__block{
+		padding-bottom: 20px;
+	}
+	&__main-title{
+		font-size: 30px;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin: 0 0 10px;
+	}
+	&__title{
+		font-size: 30px;
+		font-weight: 300;
+		padding-bottom: 2px;
+		margin-bottom: 30px;
+		border-bottom: 1px solid #e9e9e9;
+	}
+	&__btn{
+		@include btn($color_submit);
+		position: relative;
+		padding-left: 35px;
+		cursor: pointer;
+		&.hide{
+			display: none;
+		}
+		&::before{
+			content: '\e921';
+			@include font;
+			font-size: 11px;
+			position: absolute;
+			left: 38px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+}

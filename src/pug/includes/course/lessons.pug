@@ -1,0 +1,32 @@
+section.lessons(
+	v-if="state == 'Lessons'"
+)
+	- var x = 10;
+	- for (var a = 1; a<=x; a++) {
+		.lessons__item
+			h2.lessons__main-title Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+			.lessons__body
+				- var count = 20;
+				- for (var i = 1; i<=count; i++) {
+					.lessons__row
+						.lessons__view 10 000 000
+						a.lessons__title(href="#")=i + ". Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+				- }
+	- }
+	.single-nav
+		.single-nav__arrows
+			a.single-nav__arrow.single-nav__arrow_disabled.single-nav__arrow_prev(href="#") Prev
+			a.single-nav__arrow.single-nav__arrow_next(href="#") Next
+		ul.single-nav__dots
+			- var x = 38;
+			- var activeLink = 'single-nav__link_active';
+			- for (var i=1; i<=x; i++) {
+				li.single-nav__item
+					if i == 12
+						a(
+							href="#",
+							class="single-nav__link" + " " + activeLink
+						) Link
+					else
+						a.single-nav__link(href="#") Link
+			- }

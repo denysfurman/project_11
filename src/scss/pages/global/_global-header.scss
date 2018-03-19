@@ -1,0 +1,45 @@
+.global-header{
+	background: transparent url('../images/global.jpg') center top no-repeat;
+	height: 480px;
+	text-align: center;
+	padding: 0 15px;
+	padding-top: 110px;
+	margin: 0 0 25px;
+	&__title{
+		font-size: 30px;
+		font-weight: 300;
+		margin: 0 0 22px;
+		text-transform: uppercase;
+	}
+	&__search{
+		max-width: 895px;
+		width: 100%;
+		margin: 0 auto;
+		.search_global{
+			flex: 0 0 100%;
+			max-width: 100%;
+			margin-bottom: 20px;
+		}
+	}
+	.form__checkboxes{
+		margin-bottom: 13px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+		label{
+			&::before{
+				background: #fff;
+			}
+		}
+	}
+	&__content{
+		display: flex;
+		flex-wrap: wrap;
+		padding-left: 100px;
+	}
+	&__col{
+		flex: 0 0 265px;
+		max-width: 265px;
+		text-align: left;
+	}
+}

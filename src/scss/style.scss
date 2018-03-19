@@ -1,0 +1,93 @@
+//-----------------------------------NORMALIZE----------------------------//
+@import 'components/base/_normalize';
+
+//-----------------------------------VARIABLES----------------------------//
+@import 'components/base/_variables';
+
+//-----------------------------------MIXINS----------------------------//
+@import 'components/base/_mixins';
+
+//-----------------------------------FONTS----------------------------//
+@import 'components/base/_fonts';
+
+//-----------------------------------SLICK----------------------------//
+@import 'components/base/_slick';
+
+//-----------------------------------BASE STYLES----------------------------//
+@import 'components/base/_base';
+@import 'components/base/_base_text';
+
+//-----------------------------------HEADER----------------------------//
+@import 'components/_header';
+
+//-----------------------------------NAVIGATION----------------------------//
+@import 'components/_navigation';
+
+//-----------------------------------PAGER----------------------------//
+@import 'components/_pager';
+
+//-----------------------------------BREADCRUMBS----------------------------//
+@import 'components/_breadcrumbs';
+
+//-----------------------------------FOOTER----------------------------//
+@import 'components/_footer';
+
+//-----------------------------------HOME----------------------------//
+@import 'pages/home/_main-slider';
+@import 'pages/home/_courses';
+
+//-----------------------------------LOGIN----------------------------//
+@import 'pages/_login-register';
+
+//-----------------------------------COURSE----------------------------//
+@import 'pages/_course';
+
+//-----------------------------------ARTICLES----------------------------//
+@import 'pages/articles/_articles';
+
+//-----------------------------------ARTICLE----------------------------//
+@import 'pages/article/_article';
+
+//-----------------------------------SHARE----------------------------//
+@import 'components/_share';
+
+//-----------------------------------SINGLE-NAV----------------------------//
+@import 'components/_single-nav';
+
+//-----------------------------------COMMENTS----------------------------//
+@import 'components/_comments';
+
+//-----------------------------------SIDEBAR----------------------------//
+@import 'components/_sidebar';
+
+//-----------------------------------STUDY PLANS----------------------------//
+@import 'pages/_study_plans';
+
+//-----------------------------------QA LIBRARY----------------------------//
+@import 'pages/_qa_library';
+
+//-----------------------------------SERTIFICATES----------------------------//
+@import 'pages/_certificates';
+
+//-----------------------------------DOWNLOAD----------------------------//
+@import 'pages/download/_download';
+@import 'pages/download/_download-nav';
+@import 'pages/download/_download-filter';
+
+//-----------------------------------COURSE----------------------------//
+@import 'pages/course/_course';
+@import 'pages/course/_course-nav';
+@import 'pages/course/_lessons';
+@import 'pages/course/_course-information';
+@import 'pages/course/_search-inner';
+@import 'pages/course/_faq';
+@import 'pages/course/_forum';
+
+//-----------------------------------TEST----------------------------//
+@import 'pages/_test';
+
+//-----------------------------------GLOBAL----------------------------//
+@import 'pages/global/_global';
+@import 'pages/global/_global-header';
+@import 'pages/global/_global-library';
+@import 'pages/global/_global-course';

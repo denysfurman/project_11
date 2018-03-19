@@ -1,0 +1,146 @@
+.popular-posts{
+	position: relative;
+	padding-top: 34px;
+	&__row{
+		display: flex;
+		margin-bottom: 20px;
+		@include media(phone){
+			flex-wrap: wrap;
+		}
+	}
+	&__image{
+		flex: 0 0 270px;
+		max-width: 270px;
+		@include media(phone){
+			max-width: 100%;
+			flex: 0 0 100%;
+		}
+	}
+	&__img{
+		border-radius: 0 0 0 38px;
+		@include media(phone){
+			border-radius: 38px 38px 0 0;
+			width: 100%;
+		}
+	}
+	&__body{
+		background: #fff;
+		border: 1px solid #e9e9e9;
+		border-left: none;
+		border-radius: 0 38px 0 0;
+		padding: 20px 24px;
+		@include media(phone){
+			margin-top: -38px;
+			border-radius: 0 0 38px 38px;
+		}
+	}
+	&__title{
+		font-size: 18px;
+		font-weight: 700;
+		margin: 0 0 15px;
+		display: block;
+		@include media(lg){
+			margin-bottom: 5px;
+		}
+	}
+	&__text{
+		font-size: 16px;
+		line-height: 1.875;
+		margin-bottom: 0;
+		max-height: 88px;
+		overflow: hidden;
+	}
+	*{
+		outline: none !important;
+	}
+	.slick{
+		&-arrow{
+			color: #fff;
+			width: 18px;
+			position: absolute;
+			height: 30px;
+			top: 1px;
+			display: block;
+			text-indent: -9999px;
+			border: none;
+			background: $color_brand;
+			&::after{
+				@include font;
+				font-size: 18px;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				left: 0;
+				text-indent: 0;
+				transition: .4s;
+			}
+			&.slick-prev{
+				left: 9px;
+				&::after{
+					transform: translateY(-50%) rotate(180deg);
+					content: '\e906';
+				}
+			}
+			&.slick-next{
+				right: 9px;
+				&::after{
+					content: '\e906';
+				}
+			}
+		}
+		&-disabled{
+			opacity: .22;
+			&:hover{
+				color: #fff;
+			}
+		}
+		&-dots{
+			margin-bottom: 0;
+			padding-left: 23px;
+			display: flex;
+			flex-wrap: wrap;
+			width: 100%;
+			li{
+				list-style: none;
+				margin-right: 11px;
+				&.slick-active{
+					button{
+						background: #060606;
+					}
+				}
+			}
+			button{
+				display: block;
+				text-indent: -9999px;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background: #dedede;
+				opacity: .5;
+				transition: .4s;
+				border: none;
+				&:hover{
+					background: $color_brand;
+				}
+			}
+		}
+	}
+	&_nav{
+		background: #fff;
+		border-radius: 38px 0;
+		border: 1px solid #e9e9e9;
+		padding: 20px 28px;
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+	}
+	&_arrows{
+		flex: 0 0 85px;
+		max-width: 85px;
+		height: 32px;
+		background: $color_brand;
+		box-shadow: 5px 3px 8px rgba(0, 0, 0, 0.15);
+		border-radius: 16px;
+		position: relative;
+	}
+}

@@ -1,0 +1,49 @@
+section.forum(
+	v-if="state == 'Forum for the course'"
+)
+	.forum__header
+		.forum__th Theme / Author
+		.forum__th Replies / Views
+		.forum__th Latest reply
+	.forum__content
+		- var count = 4;
+		- for (var i=1; i<=count; i++) {
+			.forum__row
+				.forum__container
+					.forum__author
+						.forum__image
+							img.forum__img(
+								src="../images/comment_1.png"
+								alt=""
+							)
+						.forum__body
+							h3.forum__title Entrant 2018 - Admission - Points, dates, lists, places
+							.forum__name By Tair
+					.forum__stat
+						.forum__item.forum__item_replies 1 Replies 
+						.forum__item.forum__item_views 3105 Views
+					.forum__stat
+						.forum__item.forum__item_date 18-Jan-2010, 10:43:21
+						.forum__item.forum__item_name from Tair
+				p.forum__text It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+		- }
+	.single-nav
+		.single-nav__arrows
+			a.single-nav__arrow.single-nav__arrow_disabled.single-nav__arrow_prev(href="#") Prev
+			a.single-nav__arrow.single-nav__arrow_next(href="#") Next
+		ul.single-nav__dots
+			- var x = 38;
+			- var activeLink = 'single-nav__link_active';
+			- for (var i=1; i<=x; i++) {
+				li.single-nav__item
+					if i == 12
+						a(
+							href="#",
+							class="single-nav__link" + " " + activeLink
+						) Link
+					else
+						a.single-nav__link(href="#") Link
+			- }
+	footer.comments__footer
+		.comments__count Themes (4)
+		.comments__btn Add topic

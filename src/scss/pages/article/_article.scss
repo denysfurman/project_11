@@ -1,0 +1,38 @@
+@import '_article-header';
+
+.article{
+	&__content{
+		background: #fff;
+		border-radius: 38px;
+		border: 1px solid #e9e9e9;
+		margin-bottom: 20px;
+	}
+	&__image{
+		position: relative;
+		margin-bottom: 9px;
+		&::after{
+			content: '';
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: rgba(0,0,0,.41);
+		}
+	}
+	&__description{
+		padding: 0 20px;
+		font-size: 16px;
+		line-height: 1.875;
+		p{
+			margin-bottom: 30px;
+			&:last-child{
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+
+@import '_popular-posts';
+@import '_related-posts';

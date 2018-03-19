@@ -1,0 +1,128 @@
+.course-page{
+	&__wrap{
+		@include media(tab){
+			overflow-y: auto;
+		}
+		@include media(phone){
+			overflow-y: auto;
+		}
+	}
+}
+.base-table{
+	width: 100%;
+	border: 1px solid #e9e9e9;
+	border-right: none;
+	margin-bottom: 50px;
+	@include media(tab){
+		width: 1400px;
+	}
+	@include media(phone){
+		width: 1400px;
+	}
+	th{
+		font-size: 16px;
+		font-weight: 700;
+		height: 58px;
+		padding: 0 28px;
+		border-right: 1px solid #e9e9e9;
+		background-color: $color_brand !important;
+		color: #fff;
+		background: url('../images/sort_arrow2.png') right 10px center no-repeat $color_brand;
+		@include media(lg){
+			font-size: 14px;
+			padding: 0 20px 0 10px;
+			background-position: right 5px center;
+		}
+		@include media(tab){
+			font-size: 14px;
+		} 
+		@include media(phone){
+			font-size: 14px;
+		}
+		&.base-table__asc{
+			background: url('../images/sort_arrow_asc2.png') right 10px center no-repeat $color_brand;
+		}
+		&.base-table__id{
+			text-align: center;
+			background: #fff;
+		}
+		&.base-table__class{
+			@include media(lg){
+				width: 15%;
+			}
+		}
+	}
+	tbody{ 
+		tr{
+			transition: 0.4s;
+			background: #fff;
+			&:not(.main-tr):nth-child(odd){
+				background: #f5f5f5;
+			}
+			&.main-tr{
+				&_odd{
+					background: #f5f5f5;		
+				}
+			}
+			&:hover{
+				background: #eaeaea;
+			}
+		}
+	}
+	td{
+		height: 50px;
+		border-right: 1px solid #e9e9e9;
+		padding: 5px 20px;
+		color: $color_brand;
+		font-size: 18px;
+		@include media(lg){
+			font-size: 16px;
+		}
+		@include media(tab){
+			font-size: 14px;
+		}
+		@include media(phone){
+			font-size: 14px;
+		}
+		&.base-table__id{
+			color: $color_main;
+			text-align: center;
+		}
+		&:last-child,
+		&.base-table__status,
+		&.base-table__passed{
+			color: $color_main;
+		}
+		&.base-table__current,
+		&.base-table__register,
+		&.base-table__lesson,
+		&.base-table__section,
+		&.base-table__class{
+			text-decoration: underline;
+		}
+		&.base-table__section{
+			&_sertificates{
+				text-decoration: none;
+			}
+		}
+		&.base-table__student{
+			color: $color_main;
+		}
+		a{
+			color: $color_brand !important;
+			text-decoration: underline;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+	&__name{
+		a{
+			color: $color_brand !important;
+			text-decoration: underline;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+}

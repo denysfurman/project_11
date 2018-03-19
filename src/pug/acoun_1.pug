@@ -1,0 +1,16 @@
+extend includes/base/head
+block head
+    main.wrapper.wrapper_not-front
+        .wrapper__content
+            include includes/base/header.pug
+            .wrapper__middle
+                include includes/base/navigation.pug
+                .container-fluid
+                    .breadcrumbs
+                        a.breadcrumbs__link.breadcrumbs__link_home(href="home.html") Home
+                        span.breadcrumbs__sep /
+                        span.breadcrumbs__this Articles
+
+
+
+        include includes/base/footer.pug

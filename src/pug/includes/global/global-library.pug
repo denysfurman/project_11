@@ -1,0 +1,41 @@
+section.global-library.global__block
+	h3.global__title Q&library (res.13)
+	.global-library__content.row
+		- var count = 7;
+		- for(var i = 1; i <= count; i++){
+			.global-library__col.col-xl-6
+				.global-library__container
+					.global-library__header
+						.global-library__user
+							.global-library__image
+								img.global-library__img(
+									src="../images/user-photo.png"
+									alt=""
+								)
+							.global-library__id ID
+							.global-library__value 8564789
+						.global-library__info
+							.comments__item
+								.comments__photo
+									img.comments__img(
+										src="../images/comment_2.png"
+										alt=""
+									)
+								.comments__body
+									h3.comments__name Jen Doe
+									.comments__date 10 hours ago
+									p.comments__text It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+					.global-library__footer
+						.faq__author.faq__author_admin
+							.faq__image
+								img.faq__img(
+									src="../images/comment_2.png"
+									alt=""
+								)
+							.faq__name.faq__name_admin Jenny Doe
+							.faq__post 5 hours ago
+						.global-library__description
+							p It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+							a.global-library__link(href="#") Read more
+		- }
+	.global__btn Show more

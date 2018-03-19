@@ -1,0 +1,24 @@
+section.main-slider
+    .main-slider__content
+        - var titles = ['The Best Learning Institution','Learning Institution','The Learning Institution','The Best Learning'];	
+            each title, count in titles
+                - var counter = count+1;
+                .main-slider__slide
+                    .main-slider__image
+                        img.main-slider__img(
+                            src='../images/slider_'+counter+'.jpg', 
+                            alt=""
+                        )
+                    .main-slider__container    
+                        .main-slider__body
+                            .main-slider__info Welcome To Study
+                            h2.main-slider__title=title
+                            p.main-slider__text 
+                                | There are many variations of passages of Lorem Ipsum available, but 
+                                |the majority have suffered alteration in some form, by injected 
+                                |humour, or randomised words whichdon't look even slightly believable.
+                            a.main-slider__btn(
+                                href="#"
+                            ) View courses
+
+                

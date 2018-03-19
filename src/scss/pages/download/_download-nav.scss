@@ -1,0 +1,45 @@
+.download-nav{
+	&__wrap{
+		display: flex;
+		flex-wrap: wrap;
+		position: relative;
+		margin-bottom: 15px;
+		&::after{
+			content: '';
+			display: block;
+			width: 100%;
+			height: 1px;
+			background: #e7e7e7;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+	}
+	&__link{
+		font-size: 16px;
+		padding: 7px 30px;
+		text-decoration: none !important;
+		position: relative;
+		@include media(phone){
+			padding: 7px 15px;
+		}
+		&::after{
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: -1px;
+			left: 0;
+			width: 0;
+			height: 3px;
+			background: $color_brand;
+			transition: .4s;
+			z-index: 10;
+		}
+		&:hover,
+		&_active{
+			&::after{
+				width: 100%;
+			}
+		}
+	}
+}

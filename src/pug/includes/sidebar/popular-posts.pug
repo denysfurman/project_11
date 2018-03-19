@@ -1,0 +1,23 @@
+.popular-posts
+	h2.sidebar__title
+		span POPULAR POSTS
+	.popular-posts__content
+		- var count = 4
+			- for(var a = 1; a<=count; a++) {
+				.popular-posts_item
+					- var x = 5;
+					- for(var i = 1; i<=x; i++) {
+						.popular-posts__row
+							.popular-posts__image
+								img.popular-posts__img(
+									src="../images/popular_" + i + ".jpg",
+									alt=""
+								)
+							.popular-posts__body
+								a.popular-posts__title Lorem Ipsum is simply dummy text of the printing 
+								p.popular-posts__text It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+					- }
+			- }
+
+	.popular-posts_nav
+		.popular-posts_arrows

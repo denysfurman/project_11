@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Imufasser</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/datepicker.css">
+    <link rel="stylesheet" href="../css/plyr.css">
+    <link rel="stylesheet" href="../css/style.min.css">
+  </head>
+  <body>
+    <main class="wrapper wrapper_not-front">
+      <div class="wrapper__content wrapper__content_backing">
+        <header class="header">
+          <div class="header__actions">
+            <div class="header__content container-fluid">
+              <div class="menu-btn">
+                <div class="menu-btn__item"></div>
+                <div class="menu-btn__item"></div>
+                <div class="menu-btn__item"></div>
+              </div>
+              <div class="search__btn"></div>
+              <form class="search">
+                <input class="form__text form__text_mod form-control" placeholder="Search">
+                <input class="search__submit" type="submit" value="Search">
+              </form>
+              <div class="socials"><a class="socials__link socials__link_1" href="#" target="_blank"></a><a class="socials__link socials__link_2" href="#" target="_blank"></a><a class="socials__link socials__link_3" href="#" target="_blank"></a><a class="socials__link socials__link_4" href="#" target="_blank"></a><a class="socials__link socials__link_5" href="#" target="_blank"></a>
+              </div>
+            </div>
+          </div>
+          <div class="header__content container-fluid">
+            <div class="header__info"><a class="header__phone" href="tel:+966505941199">+966 505941199</a>
+              <ul class="language">
+                <li class="language__item language__item_first language__item_ar"><a class="language__link" href="#">العربية</a></li>
+                <li class="language__item language__item_last"><a class="language__link language__link_active language__link_en" href="#">Eng</a></li>
+              </ul>
+            </div><a class="logo" href="home.html"><img class="logo__image" src="../images/logo.svg" alt="">
+              <div class="logo__text">www.imufasser.com</div></a>
+            <div class="sign"><a class="sign__link sign__link_login" href="#">Login</a><a class="sign__link sign__link_register" href="#">Register</a></div>
+          </div>
+        </header>
+        <div class="wrapper__middle">
+          <nav class="navigation navigation_header">
+            <div class="navigation__content"><a class="navigation__link navigation__link_header navigation__link_active" href="#">Home</a><a class="navigation__link navigation__link_header " href="#">Course</a><a class="navigation__link navigation__link_header " href="#">Study Plans</a><a class="navigation__link navigation__link_header " href="#">Q&amp;A Library</a><a class="navigation__link navigation__link_header " href="#">Forums</a><a class="navigation__link navigation__link_header " href="#">Articles</a><a class="navigation__link navigation__link_header " href="#">Student records</a><a class="navigation__link navigation__link_header " href="#">Exams</a><a class="navigation__link navigation__link_header " href="#">Certificates</a><a class="navigation__link navigation__link_header " href="#">Help</a>
+            </div>
+          </nav>
+          <div class="container-fluid">
+            <form class="form form-user form_login form_register">
+              <div class="form__title form__title_register">
+                 REGISTRATION<br>to Imufasser institute</div>
+              <div class="form__subtitle">Please indicate your name and surname</div>
+              <div class="form__item form-group">
+                <label class="form__label">Nick name</label>
+                <input class="form__text form__text_mod form-control" type="text">
+              </div>
+              <div class="form__item form-group">
+                <label class="form__label">First name</label>
+                <input class="form__text form__text_mod form-control" type="text">
+              </div>
+              <div class="form__item form-group">
+                <label class="form__label">Father name</label>
+                <input class="form__text form__text_mod form-control" type="text">
+              </div>
+              <div class="form__item form-group">
+                <label class="form__label">Family name</label>
+                <input class="form__text form__text_mod form-control" type="text">
+              </div>
+              <div class="form__item form-group">
+                <label class="form__label">E-mail</label>
+                <input class="form__text form__text_mod form-control" type="email">
+              </div>
+              <div class="form__item form-group">
+                <label class="form__label">Mobile number</label>
+                <input class="form__text form__text_mod form-control" type="text">
+              </div>
+              <div class="form__item form__item_sex form-group">
+                <label class="form__sex form__label">Sex</label>
+                <div class="form_radio-btns">
+                  <div class="form__radios">
+                    <input class="form__radio" type="radio" name="sex" id="female" checked>
+                    <label for="female">Female</label>
+                  </div>
+                  <div class="form__radios">
+                    <input class="form__radio" type="radio" name="sex" id="male">
+                    <label for="male">Male</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form__item form__item_date form-group">
+                <label class="form__label">Date of Birth</label>
+                <input class="form__text form__text_mod form__text_date form-control" type="text">
+              </div>
+              <div class="form__item form-group">
+                <label class="form__label">Nationality</label>
+                <select name="nationality">
+                  <option value="Ukrainian">Arabian</option>
+                  <option value="Arabian">Ukrainian</option>
+                </select>
+              </div>
+              <div class="form__item form-group">
+                <label class="form__label">Country</label>
+                <select name="nationality">
+                  <option value="Ukraine">Saudi Arabia</option>
+                  <option value="OAE">Ukraine</option>
+                </select>
+              </div>
+              <div class="form__item form-group">
+                <label class="form__label">City</label>
+                <select name="nationality">
+                  <option value="Dubai">Dubai</option>
+                  <option value="Vinnitsia">Vinnitsia</option>
+                </select>
+              </div>
+              <div class="form__item form-group">
+                <label class="form__label">Education level</label>
+                <select name="nationality">
+                  <option value="Level 1">Level 1</option>
+                  <option value="Level 2">Level 2</option>
+                  <option value="Level 3">Level 3</option>
+                </select>
+              </div>
+              <div class="form__item form-group form__item_image">
+                <label class="form__label">Attach the image of the qualification</label>
+                <div class="form__images">
+                  <div class="form__images-wrap">
+                    <label for="registrationImage">Add image</label>
+                    <input class="form__image form__image_register form-control" type="file" id="registrationImage" name="registration[image]" onchange="readURL(this)">
+                  </div>
+                </div>
+              </div>
+              <div class="form__actions">
+                <input class="form__submit" type="submit" value="Registration">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer__content"><a class="footer__logo" href="/"><img class="footer__image" src="../images/logo_footer.svg" alt=""></a>
+          <nav class="navigation navigation_footer">
+            <div class="navigation__content navigation__content_footer"><a class="navigation__link navigation__link_footer" href="#">Home</a><a class="navigation__link navigation__link_footer" href="#">Tests</a><a class="navigation__link navigation__link_footer" href="#">Student records</a><a class="navigation__link navigation__link_footer" href="#">Forums</a><a class="navigation__link navigation__link_footer" href="#">Articles</a><a class="navigation__link navigation__link_footer" href="#">Q&amp;A Library</a><a class="navigation__link navigation__link_footer" href="#">Certificates</a><a class="navigation__link navigation__link_footer" href="#">Help</a>
+            </div>
+          </nav>
+          <div class="statistics">
+            <div class="statistics__item"><b>Number of students</b>1500
+            </div>
+            <div class="statistics__item"><b>Number of teachers</b>50
+            </div>
+            <div class="statistics__item"><b>Number of courses</b>300
+            </div>
+            <div class="statistics__item"><b>Total number of trainees in all courses</b>600
+            </div>
+            <div class="statistics__item"><b>Total number of students currently</b>500
+            </div>
+          </div>
+          <div class="socials socials_footer"><a class="socials__link socials__link_footer socials__link_1" href="#" target="_blank"></a><a class="socials__link socials__link_footer socials__link_2" href="#" target="_blank"></a><a class="socials__link socials__link_footer socials__link_3" href="#" target="_blank"></a><a class="socials__link socials__link_footer socials__link_4" href="#" target="_blank"></a><a class="socials__link socials__link_footer socials__link_5" href="#" target="_blank"></a>
+          </div>
+          <p class="footer__copyright">
+            © Copyright 2018. All Rights Reserved111 Your Street, Your City, Your State 11111, 
+            Your Country davinci.alidropship.com
+            
+          </p>
+        </div>
+        <div class="arrow-up"></div>
+        <div class="all_pages">
+          <div class="page_point"></div>
+          <ul class="page_list">
+            <li><a href="home.html">home</a></li>
+            <li><a href="course.html">course</a></li>
+            <li><a href="login.html">login</a></li>
+            <li><a href="register.html">register</a></li>
+            <li><a href="articles.html">articles</a></li>
+            <li><a href="article.html">article</a></li>
+            <li><a href="study_plans.html">study plans</a></li>
+            <li><a href="qa_library.html">QA library</a></li>
+            <li><a href="certificates.html">certificates</a></li>
+            <li><a href="download_video.html">download video</a></li>
+            <li><a href="download_books.html">download books</a></li>
+            <li><a href="download_audio.html">download audio</a></li>
+            <li><a href="download_doc.html">download document</a></li>
+            <li><a href="download_other.html">download other</a></li>
+            <li><a href="download_image.html">download image</a></li>
+            <li><a href="course_page.html">course page</a></li>
+            <li><a href="test_1.html">test 1</a></li>
+            <li><a href="test_2.html">test 2</a></li>
+            <li><a href="test_3.html">test 3</a></li>
+            <li><a href="test_4.html">test 4</a></li>
+            <li><a href="search.html">search</a></li>
+          </ul>
+        </div>
+      </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://unpkg.com/vue"></script>
+      <script src="../js/slick.min.js"></script>
+      <script src="../js/selectize.min.js"></script>
+      <script src="../js/datepicker.js"></script>
+      <script src="../js/current-device.min.js"></script>
+      <script src="../js/jquery.livequery.min.js"></script>
+      <script src="../js/plyr.js"></script>
+      <script>
+        function readURL(input) {
+        	if (input.files && input.files[0]) {
+        		var reader = new FileReader();
+        		reader.onload = function (e) {
+        			$('.form__images').append('<div class="img_wrap"><img src="'+e.target.result+'" alt="" class="upload-image"></div>')
+        		};
+        		reader.readAsDataURL(input.files[0]);
+        	}
+        }
+      </script>
+      <script src="../js/main.js"></script>
+      <script src="../js/app.js"></script>
+    </main>
+  </body>
+</html>

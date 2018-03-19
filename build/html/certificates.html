@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Imufasser</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/datepicker.css">
+    <link rel="stylesheet" href="../css/plyr.css">
+    <link rel="stylesheet" href="../css/style.min.css">
+  </head>
+  <body>
+    <main class="wrapper wrapper_not-front">
+      <div class="wrapper__content wrapper__content_backing">
+        <header class="header">
+          <div class="header__actions">
+            <div class="header__content container-fluid">
+              <div class="menu-btn">
+                <div class="menu-btn__item"></div>
+                <div class="menu-btn__item"></div>
+                <div class="menu-btn__item"></div>
+              </div>
+              <div class="search__btn"></div>
+              <form class="search">
+                <input class="form__text form__text_mod form-control" placeholder="Search">
+                <input class="search__submit" type="submit" value="Search">
+              </form>
+              <div class="socials"><a class="socials__link socials__link_1" href="#" target="_blank"></a><a class="socials__link socials__link_2" href="#" target="_blank"></a><a class="socials__link socials__link_3" href="#" target="_blank"></a><a class="socials__link socials__link_4" href="#" target="_blank"></a><a class="socials__link socials__link_5" href="#" target="_blank"></a>
+              </div>
+            </div>
+          </div>
+          <div class="header__content container-fluid">
+            <div class="header__info"><a class="header__phone" href="tel:+966505941199">+966 505941199</a>
+              <ul class="language">
+                <li class="language__item language__item_first language__item_ar"><a class="language__link" href="#">العربية</a></li>
+                <li class="language__item language__item_last"><a class="language__link language__link_active language__link_en" href="#">Eng</a></li>
+              </ul>
+            </div><a class="logo" href="home.html"><img class="logo__image" src="../images/logo.svg" alt="">
+              <div class="logo__text">www.imufasser.com</div></a>
+            <div class="sign"><a class="sign__link sign__link_login" href="#">Login</a><a class="sign__link sign__link_register" href="#">Register</a></div>
+          </div>
+        </header>
+        <div class="wrapper__middle">
+          <nav class="navigation navigation_header">
+            <div class="navigation__content"><a class="navigation__link navigation__link_header navigation__link_active" href="#">Home</a><a class="navigation__link navigation__link_header " href="#">Course</a><a class="navigation__link navigation__link_header " href="#">Study Plans</a><a class="navigation__link navigation__link_header " href="#">Q&amp;A Library</a><a class="navigation__link navigation__link_header " href="#">Forums</a><a class="navigation__link navigation__link_header " href="#">Articles</a><a class="navigation__link navigation__link_header " href="#">Student records</a><a class="navigation__link navigation__link_header " href="#">Exams</a><a class="navigation__link navigation__link_header " href="#">Certificates</a><a class="navigation__link navigation__link_header " href="#">Help</a>
+            </div>
+          </nav>
+          <div class="container-fluid">
+            <div class="breadcrumbs"><a class="breadcrumbs__link breadcrumbs__link_home" href="home.html">Home</a><span class="breadcrumbs__sep">/</span><span class="breadcrumbs__this">Certificates</span></div>
+            <div class="certificates">
+              <form class="filter filter_certificates">
+                <div class="certificates__label">Select by:</div>
+                <div class="certificates__wrap">
+                  <div class="filter__item_certificates">
+                    <label class="item-label">Certificate date</label>
+                    <select>
+                      <option value="Year / Month">Year / Month</option>
+                      <option value="Year / Month">Year / Month</option>
+                      <option value="Year / Month">Year / Month</option>
+                      <option value="Year / Month">Year / Month</option>
+                      <option value="Year / Month">Year / Month</option>
+                    </select>
+                  </div>
+                  <div class="filter__item_certificates">
+                    <label class="item-label">Course name</label>
+                    <select>
+                      <option value="Course #1">Course #1</option>
+                      <option value="Course #2">Course #2</option>
+                      <option value="Course #3">Course #3</option>
+                      <option value="Course #4">Course #4</option>
+                      <option value="Course #5">Course #5</option>
+                    </select>
+                  </div>
+                  <div class="filter__item_certificates">
+                    <label class="item-label">Student name</label>
+                    <select>
+                      <option value="Student #1">Student #1</option>
+                      <option value="Student #2">Student #2</option>
+                      <option value="Student #3">Student #3</option>
+                      <option value="Student #4">Student #4</option>
+                      <option value="Student #5">Student #5</option>
+                    </select>
+                  </div>
+                </div>
+              </form>
+              <div class="library__content">
+                <div class="library__wrap">
+                  <table class="base-table base-table_certificates">
+                    <thead>
+                      <tr>
+                        <th class="base-table__id base-table__cerificates">ID</th>
+                        <th class="base-table__name base-table__cerificates">Question title</th>
+                        <th class="base-table__teacher base-table__cerificates base-table__asc">Number of certificates</th>
+                        <th class="base-table__date base-table__cerificates base-table__asc">Courses</th>
+                        <th class="base-table__class base-table__cerificates">View certificates</th>
+                        <th class="base-table__section base-table__cerificates">Views</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="main-tr main-tr_odd">
+                        <td class="base-table__id base-table__cerificates">8564789</td>
+                        <td class="base-table__student base-table__cerificates">Student 1</td>
+                        <td class="base-table__number base-table__cerificates"><a href="#">Course 1</a></td>
+                        <td class="base-table__courses base-table__cerificates"><a href="#">Course 1, Course 2, Course 3</a></td>
+                        <td class="base-table__view base-table__cerificates">
+                          <button class="certificates__btn" type="button">View</button>
+                        </td>
+                        <td class="base-table__section base-table__cerificates base-table__section_sertificates">10 000 000</td>
+                      </tr>
+                      <tr class="certificates-dropdown">
+                        <td class="certificates-dropdown__td" colspan="6">
+                          <div class="certificates-dropdown__wrap">
+                            <div class="certificates-dropdown__images"><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""></div>
+                            <div class="certificates-dropdown__footer">
+                              <div class="certificates-dropdown_arrows"></div><a class="certificates-dropdown__print" href="#">Print</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="main-tr main-tr__even">
+                        <td class="base-table__id base-table__cerificates">8564789</td>
+                        <td class="base-table__student base-table__cerificates">Student 2</td>
+                        <td class="base-table__number base-table__cerificates"><a href="#">Course 2</a></td>
+                        <td class="base-table__courses base-table__cerificates"><a href="#">Course 1, Course 2, Course 3</a></td>
+                        <td class="base-table__view base-table__cerificates">
+                          <button class="certificates__btn" type="button">View</button>
+                        </td>
+                        <td class="base-table__section base-table__cerificates base-table__section_sertificates">10 000 000</td>
+                      </tr>
+                      <tr class="certificates-dropdown">
+                        <td class="certificates-dropdown__td" colspan="6">
+                          <div class="certificates-dropdown__wrap">
+                            <div class="certificates-dropdown__images"><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""></div>
+                            <div class="certificates-dropdown__footer">
+                              <div class="certificates-dropdown_arrows"></div><a class="certificates-dropdown__print" href="#">Print</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="main-tr main-tr_odd">
+                        <td class="base-table__id base-table__cerificates">8564789</td>
+                        <td class="base-table__student base-table__cerificates">Student 3</td>
+                        <td class="base-table__number base-table__cerificates"><a href="#">Course 3</a></td>
+                        <td class="base-table__courses base-table__cerificates"><a href="#">Course 1, Course 2, Course 3</a></td>
+                        <td class="base-table__view base-table__cerificates">
+                          <button class="certificates__btn" type="button">View</button>
+                        </td>
+                        <td class="base-table__section base-table__cerificates base-table__section_sertificates">10 000 000</td>
+                      </tr>
+                      <tr class="certificates-dropdown">
+                        <td class="certificates-dropdown__td" colspan="6">
+                          <div class="certificates-dropdown__wrap">
+                            <div class="certificates-dropdown__images"><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""></div>
+                            <div class="certificates-dropdown__footer">
+                              <div class="certificates-dropdown_arrows"></div><a class="certificates-dropdown__print" href="#">Print</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="main-tr main-tr__even">
+                        <td class="base-table__id base-table__cerificates">8564789</td>
+                        <td class="base-table__student base-table__cerificates">Student 4</td>
+                        <td class="base-table__number base-table__cerificates"><a href="#">Course 4</a></td>
+                        <td class="base-table__courses base-table__cerificates"><a href="#">Course 1, Course 2, Course 3</a></td>
+                        <td class="base-table__view base-table__cerificates">
+                          <button class="certificates__btn" type="button">View</button>
+                        </td>
+                        <td class="base-table__section base-table__cerificates base-table__section_sertificates">10 000 000</td>
+                      </tr>
+                      <tr class="certificates-dropdown">
+                        <td class="certificates-dropdown__td" colspan="6">
+                          <div class="certificates-dropdown__wrap">
+                            <div class="certificates-dropdown__images"><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""></div>
+                            <div class="certificates-dropdown__footer">
+                              <div class="certificates-dropdown_arrows"></div><a class="certificates-dropdown__print" href="#">Print</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="main-tr main-tr_odd">
+                        <td class="base-table__id base-table__cerificates">8564789</td>
+                        <td class="base-table__student base-table__cerificates">Student 5</td>
+                        <td class="base-table__number base-table__cerificates"><a href="#">Course 5</a></td>
+                        <td class="base-table__courses base-table__cerificates"><a href="#">Course 1, Course 2, Course 3</a></td>
+                        <td class="base-table__view base-table__cerificates">
+                          <button class="certificates__btn" type="button">View</button>
+                        </td>
+                        <td class="base-table__section base-table__cerificates base-table__section_sertificates">10 000 000</td>
+                      </tr>
+                      <tr class="certificates-dropdown">
+                        <td class="certificates-dropdown__td" colspan="6">
+                          <div class="certificates-dropdown__wrap">
+                            <div class="certificates-dropdown__images"><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""></div>
+                            <div class="certificates-dropdown__footer">
+                              <div class="certificates-dropdown_arrows"></div><a class="certificates-dropdown__print" href="#">Print</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="main-tr main-tr__even">
+                        <td class="base-table__id base-table__cerificates">8564789</td>
+                        <td class="base-table__student base-table__cerificates">Student 6</td>
+                        <td class="base-table__number base-table__cerificates"><a href="#">Course 6</a></td>
+                        <td class="base-table__courses base-table__cerificates"><a href="#">Course 1, Course 2, Course 3</a></td>
+                        <td class="base-table__view base-table__cerificates">
+                          <button class="certificates__btn" type="button">View</button>
+                        </td>
+                        <td class="base-table__section base-table__cerificates base-table__section_sertificates">10 000 000</td>
+                      </tr>
+                      <tr class="certificates-dropdown">
+                        <td class="certificates-dropdown__td" colspan="6">
+                          <div class="certificates-dropdown__wrap">
+                            <div class="certificates-dropdown__images"><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""></div>
+                            <div class="certificates-dropdown__footer">
+                              <div class="certificates-dropdown_arrows"></div><a class="certificates-dropdown__print" href="#">Print</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="main-tr main-tr_odd">
+                        <td class="base-table__id base-table__cerificates">8564789</td>
+                        <td class="base-table__student base-table__cerificates">Student 7</td>
+                        <td class="base-table__number base-table__cerificates"><a href="#">Course 7</a></td>
+                        <td class="base-table__courses base-table__cerificates"><a href="#">Course 1, Course 2, Course 3</a></td>
+                        <td class="base-table__view base-table__cerificates">
+                          <button class="certificates__btn" type="button">View</button>
+                        </td>
+                        <td class="base-table__section base-table__cerificates base-table__section_sertificates">10 000 000</td>
+                      </tr>
+                      <tr class="certificates-dropdown">
+                        <td class="certificates-dropdown__td" colspan="6">
+                          <div class="certificates-dropdown__wrap">
+                            <div class="certificates-dropdown__images"><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""></div>
+                            <div class="certificates-dropdown__footer">
+                              <div class="certificates-dropdown_arrows"></div><a class="certificates-dropdown__print" href="#">Print</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="main-tr main-tr__even">
+                        <td class="base-table__id base-table__cerificates">8564789</td>
+                        <td class="base-table__student base-table__cerificates">Student 8</td>
+                        <td class="base-table__number base-table__cerificates"><a href="#">Course 8</a></td>
+                        <td class="base-table__courses base-table__cerificates"><a href="#">Course 1, Course 2, Course 3</a></td>
+                        <td class="base-table__view base-table__cerificates">
+                          <button class="certificates__btn" type="button">View</button>
+                        </td>
+                        <td class="base-table__section base-table__cerificates base-table__section_sertificates">10 000 000</td>
+                      </tr>
+                      <tr class="certificates-dropdown">
+                        <td class="certificates-dropdown__td" colspan="6">
+                          <div class="certificates-dropdown__wrap">
+                            <div class="certificates-dropdown__images"><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""></div>
+                            <div class="certificates-dropdown__footer">
+                              <div class="certificates-dropdown_arrows"></div><a class="certificates-dropdown__print" href="#">Print</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="main-tr main-tr_odd">
+                        <td class="base-table__id base-table__cerificates">8564789</td>
+                        <td class="base-table__student base-table__cerificates">Student 9</td>
+                        <td class="base-table__number base-table__cerificates"><a href="#">Course 9</a></td>
+                        <td class="base-table__courses base-table__cerificates"><a href="#">Course 1, Course 2, Course 3</a></td>
+                        <td class="base-table__view base-table__cerificates">
+                          <button class="certificates__btn" type="button">View</button>
+                        </td>
+                        <td class="base-table__section base-table__cerificates base-table__section_sertificates">10 000 000</td>
+                      </tr>
+                      <tr class="certificates-dropdown">
+                        <td class="certificates-dropdown__td" colspan="6">
+                          <div class="certificates-dropdown__wrap">
+                            <div class="certificates-dropdown__images"><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""></div>
+                            <div class="certificates-dropdown__footer">
+                              <div class="certificates-dropdown_arrows"></div><a class="certificates-dropdown__print" href="#">Print</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="main-tr main-tr__even">
+                        <td class="base-table__id base-table__cerificates">8564789</td>
+                        <td class="base-table__student base-table__cerificates">Student 10</td>
+                        <td class="base-table__number base-table__cerificates"><a href="#">Course 10</a></td>
+                        <td class="base-table__courses base-table__cerificates"><a href="#">Course 1, Course 2, Course 3</a></td>
+                        <td class="base-table__view base-table__cerificates">
+                          <button class="certificates__btn" type="button">View</button>
+                        </td>
+                        <td class="base-table__section base-table__cerificates base-table__section_sertificates">10 000 000</td>
+                      </tr>
+                      <tr class="certificates-dropdown">
+                        <td class="certificates-dropdown__td" colspan="6">
+                          <div class="certificates-dropdown__wrap">
+                            <div class="certificates-dropdown__images"><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""></div>
+                            <div class="certificates-dropdown__footer">
+                              <div class="certificates-dropdown_arrows"></div><a class="certificates-dropdown__print" href="#">Print</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="main-tr main-tr_odd">
+                        <td class="base-table__id base-table__cerificates">8564789</td>
+                        <td class="base-table__student base-table__cerificates">Student 11</td>
+                        <td class="base-table__number base-table__cerificates"><a href="#">Course 11</a></td>
+                        <td class="base-table__courses base-table__cerificates"><a href="#">Course 1, Course 2, Course 3</a></td>
+                        <td class="base-table__view base-table__cerificates">
+                          <button class="certificates__btn" type="button">View</button>
+                        </td>
+                        <td class="base-table__section base-table__cerificates base-table__section_sertificates">10 000 000</td>
+                      </tr>
+                      <tr class="certificates-dropdown">
+                        <td class="certificates-dropdown__td" colspan="6">
+                          <div class="certificates-dropdown__wrap">
+                            <div class="certificates-dropdown__images"><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""></div>
+                            <div class="certificates-dropdown__footer">
+                              <div class="certificates-dropdown_arrows"></div><a class="certificates-dropdown__print" href="#">Print</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="main-tr main-tr__even">
+                        <td class="base-table__id base-table__cerificates">8564789</td>
+                        <td class="base-table__student base-table__cerificates">Student 12</td>
+                        <td class="base-table__number base-table__cerificates"><a href="#">Course 12</a></td>
+                        <td class="base-table__courses base-table__cerificates"><a href="#">Course 1, Course 2, Course 3</a></td>
+                        <td class="base-table__view base-table__cerificates">
+                          <button class="certificates__btn" type="button">View</button>
+                        </td>
+                        <td class="base-table__section base-table__cerificates base-table__section_sertificates">10 000 000</td>
+                      </tr>
+                      <tr class="certificates-dropdown">
+                        <td class="certificates-dropdown__td" colspan="6">
+                          <div class="certificates-dropdown__wrap">
+                            <div class="certificates-dropdown__images"><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""></div>
+                            <div class="certificates-dropdown__footer">
+                              <div class="certificates-dropdown_arrows"></div><a class="certificates-dropdown__print" href="#">Print</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="main-tr main-tr_odd">
+                        <td class="base-table__id base-table__cerificates">8564789</td>
+                        <td class="base-table__student base-table__cerificates">Student 13</td>
+                        <td class="base-table__number base-table__cerificates"><a href="#">Course 13</a></td>
+                        <td class="base-table__courses base-table__cerificates"><a href="#">Course 1, Course 2, Course 3</a></td>
+                        <td class="base-table__view base-table__cerificates">
+                          <button class="certificates__btn" type="button">View</button>
+                        </td>
+                        <td class="base-table__section base-table__cerificates base-table__section_sertificates">10 000 000</td>
+                      </tr>
+                      <tr class="certificates-dropdown">
+                        <td class="certificates-dropdown__td" colspan="6">
+                          <div class="certificates-dropdown__wrap">
+                            <div class="certificates-dropdown__images"><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""></div>
+                            <div class="certificates-dropdown__footer">
+                              <div class="certificates-dropdown_arrows"></div><a class="certificates-dropdown__print" href="#">Print</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="main-tr main-tr__even">
+                        <td class="base-table__id base-table__cerificates">8564789</td>
+                        <td class="base-table__student base-table__cerificates">Student 14</td>
+                        <td class="base-table__number base-table__cerificates"><a href="#">Course 14</a></td>
+                        <td class="base-table__courses base-table__cerificates"><a href="#">Course 1, Course 2, Course 3</a></td>
+                        <td class="base-table__view base-table__cerificates">
+                          <button class="certificates__btn" type="button">View</button>
+                        </td>
+                        <td class="base-table__section base-table__cerificates base-table__section_sertificates">10 000 000</td>
+                      </tr>
+                      <tr class="certificates-dropdown">
+                        <td class="certificates-dropdown__td" colspan="6">
+                          <div class="certificates-dropdown__wrap">
+                            <div class="certificates-dropdown__images"><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""></div>
+                            <div class="certificates-dropdown__footer">
+                              <div class="certificates-dropdown_arrows"></div><a class="certificates-dropdown__print" href="#">Print</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="main-tr main-tr_odd">
+                        <td class="base-table__id base-table__cerificates">8564789</td>
+                        <td class="base-table__student base-table__cerificates">Student 15</td>
+                        <td class="base-table__number base-table__cerificates"><a href="#">Course 15</a></td>
+                        <td class="base-table__courses base-table__cerificates"><a href="#">Course 1, Course 2, Course 3</a></td>
+                        <td class="base-table__view base-table__cerificates">
+                          <button class="certificates__btn" type="button">View</button>
+                        </td>
+                        <td class="base-table__section base-table__cerificates base-table__section_sertificates">10 000 000</td>
+                      </tr>
+                      <tr class="certificates-dropdown">
+                        <td class="certificates-dropdown__td" colspan="6">
+                          <div class="certificates-dropdown__wrap">
+                            <div class="certificates-dropdown__images"><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""></div>
+                            <div class="certificates-dropdown__footer">
+                              <div class="certificates-dropdown_arrows"></div><a class="certificates-dropdown__print" href="#">Print</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="main-tr main-tr__even">
+                        <td class="base-table__id base-table__cerificates">8564789</td>
+                        <td class="base-table__student base-table__cerificates">Student 16</td>
+                        <td class="base-table__number base-table__cerificates"><a href="#">Course 16</a></td>
+                        <td class="base-table__courses base-table__cerificates"><a href="#">Course 1, Course 2, Course 3</a></td>
+                        <td class="base-table__view base-table__cerificates">
+                          <button class="certificates__btn" type="button">View</button>
+                        </td>
+                        <td class="base-table__section base-table__cerificates base-table__section_sertificates">10 000 000</td>
+                      </tr>
+                      <tr class="certificates-dropdown">
+                        <td class="certificates-dropdown__td" colspan="6">
+                          <div class="certificates-dropdown__wrap">
+                            <div class="certificates-dropdown__images"><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""></div>
+                            <div class="certificates-dropdown__footer">
+                              <div class="certificates-dropdown_arrows"></div><a class="certificates-dropdown__print" href="#">Print</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="main-tr main-tr_odd">
+                        <td class="base-table__id base-table__cerificates">8564789</td>
+                        <td class="base-table__student base-table__cerificates">Student 17</td>
+                        <td class="base-table__number base-table__cerificates"><a href="#">Course 17</a></td>
+                        <td class="base-table__courses base-table__cerificates"><a href="#">Course 1, Course 2, Course 3</a></td>
+                        <td class="base-table__view base-table__cerificates">
+                          <button class="certificates__btn" type="button">View</button>
+                        </td>
+                        <td class="base-table__section base-table__cerificates base-table__section_sertificates">10 000 000</td>
+                      </tr>
+                      <tr class="certificates-dropdown">
+                        <td class="certificates-dropdown__td" colspan="6">
+                          <div class="certificates-dropdown__wrap">
+                            <div class="certificates-dropdown__images"><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""></div>
+                            <div class="certificates-dropdown__footer">
+                              <div class="certificates-dropdown_arrows"></div><a class="certificates-dropdown__print" href="#">Print</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="main-tr main-tr__even">
+                        <td class="base-table__id base-table__cerificates">8564789</td>
+                        <td class="base-table__student base-table__cerificates">Student 18</td>
+                        <td class="base-table__number base-table__cerificates"><a href="#">Course 18</a></td>
+                        <td class="base-table__courses base-table__cerificates"><a href="#">Course 1, Course 2, Course 3</a></td>
+                        <td class="base-table__view base-table__cerificates">
+                          <button class="certificates__btn" type="button">View</button>
+                        </td>
+                        <td class="base-table__section base-table__cerificates base-table__section_sertificates">10 000 000</td>
+                      </tr>
+                      <tr class="certificates-dropdown">
+                        <td class="certificates-dropdown__td" colspan="6">
+                          <div class="certificates-dropdown__wrap">
+                            <div class="certificates-dropdown__images"><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""></div>
+                            <div class="certificates-dropdown__footer">
+                              <div class="certificates-dropdown_arrows"></div><a class="certificates-dropdown__print" href="#">Print</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="main-tr main-tr_odd">
+                        <td class="base-table__id base-table__cerificates">8564789</td>
+                        <td class="base-table__student base-table__cerificates">Student 19</td>
+                        <td class="base-table__number base-table__cerificates"><a href="#">Course 19</a></td>
+                        <td class="base-table__courses base-table__cerificates"><a href="#">Course 1, Course 2, Course 3</a></td>
+                        <td class="base-table__view base-table__cerificates">
+                          <button class="certificates__btn" type="button">View</button>
+                        </td>
+                        <td class="base-table__section base-table__cerificates base-table__section_sertificates">10 000 000</td>
+                      </tr>
+                      <tr class="certificates-dropdown">
+                        <td class="certificates-dropdown__td" colspan="6">
+                          <div class="certificates-dropdown__wrap">
+                            <div class="certificates-dropdown__images"><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""></div>
+                            <div class="certificates-dropdown__footer">
+                              <div class="certificates-dropdown_arrows"></div><a class="certificates-dropdown__print" href="#">Print</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="main-tr main-tr__even">
+                        <td class="base-table__id base-table__cerificates">8564789</td>
+                        <td class="base-table__student base-table__cerificates">Student 20</td>
+                        <td class="base-table__number base-table__cerificates"><a href="#">Course 20</a></td>
+                        <td class="base-table__courses base-table__cerificates"><a href="#">Course 1, Course 2, Course 3</a></td>
+                        <td class="base-table__view base-table__cerificates">
+                          <button class="certificates__btn" type="button">View</button>
+                        </td>
+                        <td class="base-table__section base-table__cerificates base-table__section_sertificates">10 000 000</td>
+                      </tr>
+                      <tr class="certificates-dropdown">
+                        <td class="certificates-dropdown__td" colspan="6">
+                          <div class="certificates-dropdown__wrap">
+                            <div class="certificates-dropdown__images"><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""></div>
+                            <div class="certificates-dropdown__footer">
+                              <div class="certificates-dropdown_arrows"></div><a class="certificates-dropdown__print" href="#">Print</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="main-tr main-tr_odd">
+                        <td class="base-table__id base-table__cerificates">8564789</td>
+                        <td class="base-table__student base-table__cerificates">Student 21</td>
+                        <td class="base-table__number base-table__cerificates"><a href="#">Course 21</a></td>
+                        <td class="base-table__courses base-table__cerificates"><a href="#">Course 1, Course 2, Course 3</a></td>
+                        <td class="base-table__view base-table__cerificates">
+                          <button class="certificates__btn" type="button">View</button>
+                        </td>
+                        <td class="base-table__section base-table__cerificates base-table__section_sertificates">10 000 000</td>
+                      </tr>
+                      <tr class="certificates-dropdown">
+                        <td class="certificates-dropdown__td" colspan="6">
+                          <div class="certificates-dropdown__wrap">
+                            <div class="certificates-dropdown__images"><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""></div>
+                            <div class="certificates-dropdown__footer">
+                              <div class="certificates-dropdown_arrows"></div><a class="certificates-dropdown__print" href="#">Print</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="main-tr main-tr__even">
+                        <td class="base-table__id base-table__cerificates">8564789</td>
+                        <td class="base-table__student base-table__cerificates">Student 22</td>
+                        <td class="base-table__number base-table__cerificates"><a href="#">Course 22</a></td>
+                        <td class="base-table__courses base-table__cerificates"><a href="#">Course 1, Course 2, Course 3</a></td>
+                        <td class="base-table__view base-table__cerificates">
+                          <button class="certificates__btn" type="button">View</button>
+                        </td>
+                        <td class="base-table__section base-table__cerificates base-table__section_sertificates">10 000 000</td>
+                      </tr>
+                      <tr class="certificates-dropdown">
+                        <td class="certificates-dropdown__td" colspan="6">
+                          <div class="certificates-dropdown__wrap">
+                            <div class="certificates-dropdown__images"><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""></div>
+                            <div class="certificates-dropdown__footer">
+                              <div class="certificates-dropdown_arrows"></div><a class="certificates-dropdown__print" href="#">Print</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="main-tr main-tr_odd">
+                        <td class="base-table__id base-table__cerificates">8564789</td>
+                        <td class="base-table__student base-table__cerificates">Student 23</td>
+                        <td class="base-table__number base-table__cerificates"><a href="#">Course 23</a></td>
+                        <td class="base-table__courses base-table__cerificates"><a href="#">Course 1, Course 2, Course 3</a></td>
+                        <td class="base-table__view base-table__cerificates">
+                          <button class="certificates__btn" type="button">View</button>
+                        </td>
+                        <td class="base-table__section base-table__cerificates base-table__section_sertificates">10 000 000</td>
+                      </tr>
+                      <tr class="certificates-dropdown">
+                        <td class="certificates-dropdown__td" colspan="6">
+                          <div class="certificates-dropdown__wrap">
+                            <div class="certificates-dropdown__images"><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""></div>
+                            <div class="certificates-dropdown__footer">
+                              <div class="certificates-dropdown_arrows"></div><a class="certificates-dropdown__print" href="#">Print</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="main-tr main-tr__even">
+                        <td class="base-table__id base-table__cerificates">8564789</td>
+                        <td class="base-table__student base-table__cerificates">Student 24</td>
+                        <td class="base-table__number base-table__cerificates"><a href="#">Course 24</a></td>
+                        <td class="base-table__courses base-table__cerificates"><a href="#">Course 1, Course 2, Course 3</a></td>
+                        <td class="base-table__view base-table__cerificates">
+                          <button class="certificates__btn" type="button">View</button>
+                        </td>
+                        <td class="base-table__section base-table__cerificates base-table__section_sertificates">10 000 000</td>
+                      </tr>
+                      <tr class="certificates-dropdown">
+                        <td class="certificates-dropdown__td" colspan="6">
+                          <div class="certificates-dropdown__wrap">
+                            <div class="certificates-dropdown__images"><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""></div>
+                            <div class="certificates-dropdown__footer">
+                              <div class="certificates-dropdown_arrows"></div><a class="certificates-dropdown__print" href="#">Print</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="main-tr main-tr_odd">
+                        <td class="base-table__id base-table__cerificates">8564789</td>
+                        <td class="base-table__student base-table__cerificates">Student 25</td>
+                        <td class="base-table__number base-table__cerificates"><a href="#">Course 25</a></td>
+                        <td class="base-table__courses base-table__cerificates"><a href="#">Course 1, Course 2, Course 3</a></td>
+                        <td class="base-table__view base-table__cerificates">
+                          <button class="certificates__btn" type="button">View</button>
+                        </td>
+                        <td class="base-table__section base-table__cerificates base-table__section_sertificates">10 000 000</td>
+                      </tr>
+                      <tr class="certificates-dropdown">
+                        <td class="certificates-dropdown__td" colspan="6">
+                          <div class="certificates-dropdown__wrap">
+                            <div class="certificates-dropdown__images"><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""><img class="certificates-dropdown__img" src="../images/certificate_1.jpg" alt=""></div>
+                            <div class="certificates-dropdown__footer">
+                              <div class="certificates-dropdown_arrows"></div><a class="certificates-dropdown__print" href="#">Print</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <nav class="pagination">
+                  <ul class="pagination__content">
+                    <li class="pagination__item pagination__item_arrow"><a class="pagination__arrow pagination__arrow_prev" href="#">Previous</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="#">1</a></li>
+                    <li class="pagination__item"><a class="pagination__link pagination__link_current" href="#">2</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="#">5</a></li>
+                    <li class="pagination__item"><a class="pagination__dots" href="#">...</a></li>
+                    <li class="pagination__item pagination__item_arrow"><a class="pagination__arrow pagination__arrow_next" href="#">Next</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer__content"><a class="footer__logo" href="/"><img class="footer__image" src="../images/logo_footer.svg" alt=""></a>
+          <nav class="navigation navigation_footer">
+            <div class="navigation__content navigation__content_footer"><a class="navigation__link navigation__link_footer" href="#">Home</a><a class="navigation__link navigation__link_footer" href="#">Tests</a><a class="navigation__link navigation__link_footer" href="#">Student records</a><a class="navigation__link navigation__link_footer" href="#">Forums</a><a class="navigation__link navigation__link_footer" href="#">Articles</a><a class="navigation__link navigation__link_footer" href="#">Q&amp;A Library</a><a class="navigation__link navigation__link_footer" href="#">Certificates</a><a class="navigation__link navigation__link_footer" href="#">Help</a>
+            </div>
+          </nav>
+          <div class="statistics">
+            <div class="statistics__item"><b>Number of students</b>1500
+            </div>
+            <div class="statistics__item"><b>Number of teachers</b>50
+            </div>
+            <div class="statistics__item"><b>Number of courses</b>300
+            </div>
+            <div class="statistics__item"><b>Total number of trainees in all courses</b>600
+            </div>
+            <div class="statistics__item"><b>Total number of students currently</b>500
+            </div>
+          </div>
+          <div class="socials socials_footer"><a class="socials__link socials__link_footer socials__link_1" href="#" target="_blank"></a><a class="socials__link socials__link_footer socials__link_2" href="#" target="_blank"></a><a class="socials__link socials__link_footer socials__link_3" href="#" target="_blank"></a><a class="socials__link socials__link_footer socials__link_4" href="#" target="_blank"></a><a class="socials__link socials__link_footer socials__link_5" href="#" target="_blank"></a>
+          </div>
+          <p class="footer__copyright">
+            © Copyright 2018. All Rights Reserved111 Your Street, Your City, Your State 11111, 
+            Your Country davinci.alidropship.com
+            
+          </p>
+        </div>
+        <div class="arrow-up"></div>
+        <div class="all_pages">
+          <div class="page_point"></div>
+          <ul class="page_list">
+            <li><a href="home.html">home</a></li>
+            <li><a href="course.html">course</a></li>
+            <li><a href="login.html">login</a></li>
+            <li><a href="register.html">register</a></li>
+            <li><a href="articles.html">articles</a></li>
+            <li><a href="article.html">article</a></li>
+            <li><a href="study_plans.html">study plans</a></li>
+            <li><a href="qa_library.html">QA library</a></li>
+            <li><a href="certificates.html">certificates</a></li>
+            <li><a href="download_video.html">download video</a></li>
+            <li><a href="download_books.html">download books</a></li>
+            <li><a href="download_audio.html">download audio</a></li>
+            <li><a href="download_doc.html">download document</a></li>
+            <li><a href="download_other.html">download other</a></li>
+            <li><a href="download_image.html">download image</a></li>
+            <li><a href="course_page.html">course page</a></li>
+            <li><a href="test_1.html">test 1</a></li>
+            <li><a href="test_2.html">test 2</a></li>
+            <li><a href="test_3.html">test 3</a></li>
+            <li><a href="test_4.html">test 4</a></li>
+            <li><a href="search.html">search</a></li>
+          </ul>
+        </div>
+      </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://unpkg.com/vue"></script>
+      <script src="../js/slick.min.js"></script>
+      <script src="../js/selectize.min.js"></script>
+      <script src="../js/datepicker.js"></script>
+      <script src="../js/current-device.min.js"></script>
+      <script src="../js/jquery.livequery.min.js"></script>
+      <script src="../js/plyr.js"></script>
+      <script>
+        function readURL(input) {
+        	if (input.files && input.files[0]) {
+        		var reader = new FileReader();
+        		reader.onload = function (e) {
+        			$('.form__images').append('<div class="img_wrap"><img src="'+e.target.result+'" alt="" class="upload-image"></div>')
+        		};
+        		reader.readAsDataURL(input.files[0]);
+        	}
+        }
+      </script>
+      <script src="../js/main.js"></script>
+      <script src="../js/app.js"></script>
+    </main>
+  </body>
+</html>

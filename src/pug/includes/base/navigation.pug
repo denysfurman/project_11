@@ -1,0 +1,12 @@
+nav.navigation.navigation_header
+    .navigation__content
+        - var names = ['Home','Course', 'Study Plans', 'Q&A Library', 'Forums', 'Articles', 'Student records', 'Exams', 'Certificates', 'Help'];
+            each name, key in names
+                if key == 0
+                    - var activeClass = 'navigation__link_active';
+                else 
+                    - var activeClass = '';
+                a(
+                    class="navigation__link navigation__link_header " + activeClass
+                    href="#"
+                )=name

@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Imufasser</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/datepicker.css">
+    <link rel="stylesheet" href="../css/plyr.css">
+    <link rel="stylesheet" href="../css/style.min.css">
+  </head>
+  <body>
+    <main class="wrapper">
+      <div class="wrapper__content">
+        <header class="header">
+          <div class="header__actions">
+            <div class="header__content container-fluid">
+              <div class="menu-btn">
+                <div class="menu-btn__item"></div>
+                <div class="menu-btn__item"></div>
+                <div class="menu-btn__item"></div>
+              </div>
+              <div class="search__btn"></div>
+              <form class="search">
+                <input class="form__text form__text_mod form-control" placeholder="Search">
+                <input class="search__submit" type="submit" value="Search">
+              </form>
+              <div class="socials"><a class="socials__link socials__link_1" href="#" target="_blank"></a><a class="socials__link socials__link_2" href="#" target="_blank"></a><a class="socials__link socials__link_3" href="#" target="_blank"></a><a class="socials__link socials__link_4" href="#" target="_blank"></a><a class="socials__link socials__link_5" href="#" target="_blank"></a>
+              </div>
+            </div>
+          </div>
+          <div class="header__content container-fluid">
+            <div class="header__info"><a class="header__phone" href="tel:+966505941199">+966 505941199</a>
+              <ul class="language">
+                <li class="language__item language__item_first language__item_ar"><a class="language__link" href="#">العربية</a></li>
+                <li class="language__item language__item_last"><a class="language__link language__link_active language__link_en" href="#">Eng</a></li>
+              </ul>
+            </div><a class="logo" href="home.html"><img class="logo__image" src="../images/logo.svg" alt="">
+              <div class="logo__text">www.imufasser.com</div></a>
+            <div class="sign"><a class="sign__link sign__link_login" href="#">Login</a><a class="sign__link sign__link_register" href="#">Register</a></div>
+          </div>
+        </header>
+        <div class="wrapper__middle">
+          <section class="courses">
+            <div class="container-fluid">
+              <h3 class="courses__title"><span>SELF-STUDY PLAN IN SCHOOL</span></h3>
+              <form class="filter">
+                <div class="filter__item">
+                  <select>
+                    <option value="Grade 11">Grade 11</option>
+                    <option value="Grade 12">Grade 12</option>
+                    <option value="Grade 13">Grade 13</option>
+                    <option value="Grade 14">Grade 14</option>
+                    <option value="Grade 15">Grade 15</option>
+                  </select>
+                </div>
+                <div class="filter__item">
+                  <select>
+                    <option value="Subject 1">Subject 1</option>
+                    <option value="Subject 2">Subject 2</option>
+                    <option value="Subject 3">Subject 3</option>
+                    <option value="Subject 4">Subject 4</option>
+                    <option value="Subject 5">Subject 5</option>
+                  </select>
+                </div>
+                <div class="filter__item filter__item_purpose">
+                  <select>
+                    <option value="Purpose of training 1">Purpose of training 1</option>
+                    <option value="Purpose of training 2">Purpose of training 2</option>
+                    <option value="Purpose of training 3">Purpose of training 3</option>
+                    <option value="Purpose of training 4">Purpose of training 4</option>
+                    <option value="Purpose of training 5">Purpose of training 5</option>
+                  </select>
+                </div>
+                <div class="filter__item filter__item_name">
+                  <div class="filter__label">Sort</div>
+                  <select>
+                    <option class="sort" value="Course names">Course names</option>
+                    <option class="sort2" value="Course names2">Course names</option>
+                    <option class="sort_num" value="Number of registrants">Number of registrants</option>
+                    <option class="sort_num2" value="Number of registrants2">Number of registrants</option>
+                    <option class="sort_num" value="Number of passed">Number of passed</option>
+                    <option class="sort_num2" value="Number of passed2">Number of passed</option>
+                    <option class="sort" value="Teachers' names">Teachers' names</option>
+                    <option class="sort2" value="Teachers' names2">Teachers' names</option>
+                  </select>
+                </div>
+                <div class="filter__actions">
+                  <input class="filter__submit" type="submit" value="Search">
+                </div>
+              </form>
+              <div class="courses__content row">
+                <div class="courses__col col-md-6 col-xl-3">
+                  <div class="courses__item">
+                    <div class="courses__wrap"> 
+                      <div class="courses__image"><img class="courses__img" src="../images/courses_1.jpg" alt=""></div>
+                      <div class="courses__body">
+                        <h3 class="courses__label">Arbitration process</h3>
+                        <p class="courses__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                      </div>
+                    </div>
+                    <div class="teacher-block">
+                      <div class="teacher-block__wrap">
+                        <div class="teacher-block__photo"><img src="../images/teacher_1.png" alt=""></div>
+                        <div class="teacher-block__photo"><img src="../images/teacher_2.png" alt=""></div>
+                        <div class="teacher-block__photo"><img src="../images/teacher_3.png" alt=""></div>
+                        <div class="teacher-block__more">
+                          <div class="teacher-block__btn" @click="showTeachers">More</div>
+                          <div class="teacher-dropdown" :class="{ 'teacher-dropdown_active': teacherActive} ">
+                            <div class="teacher-dropdown__close" @click="hideTeachers"></div>
+                            <div class="teacher-dropdown__content">
+                              <div class="teacher-dropdown__row">
+                                <div class="teacher-dropdown__image"><img class="teacher-dropdown__img" src="../images/teacher_drop.png" alt=""></div>
+                                <div class="teacher-dropdown__name">Samuel-Hopkins</div>
+                              </div>
+                              <div class="teacher-dropdown__row">
+                                <div class="teacher-dropdown__image"><img class="teacher-dropdown__img" src="../images/teacher_drop.png" alt=""></div>
+                                <div class="teacher-dropdown__name">Samuel-Hopkins</div>
+                              </div>
+                              <div class="teacher-dropdown__row">
+                                <div class="teacher-dropdown__image"><img class="teacher-dropdown__img" src="../images/teacher_drop.png" alt=""></div>
+                                <div class="teacher-dropdown__name">Samuel-Hopkins</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="title-wrap">
+                      <div class="title-wrap__label">
+                         Teacher course <br>leads</div>
+                    </div>
+                    <div class="course-info">
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_1.svg" alt=""></div>
+                        <div class="course-info__name">Lessons</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_2.svg" alt=""></div>
+                        <div class="course-info__name">Registered</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_3.svg" alt=""></div>
+                        <div class="course-info__name">Currently studing</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_4.svg" alt=""></div>
+                        <div class="course-info__name">Passed</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                    </div><a class="courses__link" href="">Registration</a>
+                  </div>
+                </div>
+                <div class="courses__col col-md-6 col-xl-3">
+                  <div class="courses__item">
+                    <div class="courses__wrap"> 
+                      <div class="courses__image"><img class="courses__img" src="../images/courses_1.jpg" alt=""></div>
+                      <div class="courses__body">
+                        <h3 class="courses__label">Arbitration process</h3>
+                        <p class="courses__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                      </div>
+                    </div>
+                    <div class="teacher-block">
+                      <div class="teacher-block__wrap">
+                        <div class="teacher-block__photo"><img src="../images/teacher_1.png" alt=""></div>
+                        <div class="teacher-block__photo"><img src="../images/teacher_2.png" alt=""></div>
+                        <div class="teacher-block__photo"><img src="../images/teacher_3.png" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="title-wrap">
+                      <div class="title-wrap__label">Сourse leads</div>
+                      <h4 class="title-wrap__text">Jenny Doe, John Mark, Mark John</h4>
+                    </div>
+                    <div class="course-info">
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_1.svg" alt=""></div>
+                        <div class="course-info__name">Lessons</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_2.svg" alt=""></div>
+                        <div class="course-info__name">Registered</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_3.svg" alt=""></div>
+                        <div class="course-info__name">Currently studing</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_4.svg" alt=""></div>
+                        <div class="course-info__name">Passed</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                    </div><a class="courses__link" href="">Registration</a>
+                  </div>
+                </div>
+                <div class="courses__col col-md-6 col-xl-3">
+                  <div class="courses__item">
+                    <div class="courses__wrap"> 
+                      <div class="courses__image"><img class="courses__img" src="../images/courses_2.jpg" alt=""></div>
+                      <div class="courses__body">
+                        <h3 class="courses__label">Arbitration process</h3>
+                        <p class="courses__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                      </div>
+                    </div>
+                    <div class="teacher-block">
+                      <div class="teacher-block__wrap">
+                        <div class="teacher-block__photo"><img src="../images/teacher_1.png" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="title-wrap">
+                      <div class="title-wrap__label">Сourse leads</div>
+                      <h4 class="title-wrap__text">Jenny Doe</h4>
+                    </div>
+                    <div class="course-info">
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_1.svg" alt=""></div>
+                        <div class="course-info__name">Lessons</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_2.svg" alt=""></div>
+                        <div class="course-info__name">Registered</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_3.svg" alt=""></div>
+                        <div class="course-info__name">Currently studing</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_4.svg" alt=""></div>
+                        <div class="course-info__name">Passed</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                    </div><a class="courses__link" href="">Registration</a>
+                  </div>
+                </div>
+                <div class="courses__col courses__col_ar col-md-6 col-xl-3">
+                  <div class="courses__item">
+                    <div class="courses__wrap"> 
+                      <div class="courses__image"><img class="courses__img" src="../images/courses_1.jpg" alt=""></div>
+                      <div class="courses__body">
+                        <h3 class="courses__label">Arbitration process</h3>
+                        <p class="courses__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                      </div>
+                    </div>
+                    <div class="teacher-block">
+                      <div class="teacher-block__wrap">
+                        <div class="teacher-block__photo"><img src="../images/teacher_1.png" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="title-wrap title-wrap_ar">
+                      <div class="title-wrap__label title-wrap__label_ar">الإمام</div>
+                      <h4 class="title-wrap__text title-wrap__text_ar">عبد العزيز بن داخل المطيري</h4>
+                    </div>
+                    <div class="course-info course-info_ar">
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info1_2.png" alt=""></div>
+                        <div class="course-info__name">دروس</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info2_2.png" alt=""></div>
+                        <div class="course-info__name">مسجل</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info3_2.png" alt=""></div>
+                        <div class="course-info__name">يدرسون الآن</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info4_2.png" alt=""></div>
+                        <div class="course-info__name">نجاح</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                    </div><a class="courses__link courses__link_ar" href="">تسجيل</a>
+                  </div>
+                </div>
+                <div class="courses__col col-md-6 col-xl-3">
+                  <div class="courses__item">
+                    <div class="courses__wrap"> 
+                      <div class="courses__image"><img class="courses__img" src="../images/courses_3.jpg" alt=""></div>
+                      <div class="courses__body">
+                        <h3 class="courses__label">Arbitration process</h3>
+                        <p class="courses__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                      </div>
+                    </div>
+                    <div class="teacher-block">
+                      <div class="teacher-block__wrap">
+                        <div class="teacher-block__photo"><img src="../images/teacher_1.png" alt=""></div>
+                        <div class="teacher-block__photo"><img src="../images/teacher_2.png" alt=""></div>
+                        <div class="teacher-block__photo"><img src="../images/teacher_3.png" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="title-wrap">
+                      <div class="title-wrap__label">Сourse leads</div>
+                      <h4 class="title-wrap__text">Jenny Doe, John Mark, Mark John</h4>
+                    </div>
+                    <div class="course-info">
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_1.svg" alt=""></div>
+                        <div class="course-info__name">Lessons</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_2.svg" alt=""></div>
+                        <div class="course-info__name">Registered</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_3.svg" alt=""></div>
+                        <div class="course-info__name">Currently studing</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_4.svg" alt=""></div>
+                        <div class="course-info__name">Passed</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                    </div><a class="courses__link" href="">Registration</a>
+                  </div>
+                </div>
+                <div class="courses__col col-md-6 col-xl-3">
+                  <div class="courses__item">
+                    <div class="courses__wrap"> 
+                      <div class="courses__image"><img class="courses__img" src="../images/courses_1.jpg" alt=""></div>
+                      <div class="courses__body">
+                        <h3 class="courses__label">Arbitration process</h3>
+                        <p class="courses__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                      </div>
+                    </div>
+                    <div class="teacher-block">
+                      <div class="teacher-block__wrap">
+                        <div class="teacher-block__photo"><img src="../images/teacher_1.png" alt=""></div>
+                        <div class="teacher-block__photo"><img src="../images/teacher_2.png" alt=""></div>
+                        <div class="teacher-block__photo"><img src="../images/teacher_3.png" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="title-wrap">
+                      <div class="title-wrap__label">Сourse leads</div>
+                      <h4 class="title-wrap__text">Jenny Doe, John Mark, Mark John</h4>
+                    </div>
+                    <div class="course-info">
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_1.svg" alt=""></div>
+                        <div class="course-info__name">Lessons</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_2.svg" alt=""></div>
+                        <div class="course-info__name">Registered</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_3.svg" alt=""></div>
+                        <div class="course-info__name">Currently studing</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_4.svg" alt=""></div>
+                        <div class="course-info__name">Passed</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                    </div><a class="courses__link" href="">Registration</a>
+                  </div>
+                </div>
+                <div class="courses__col col-md-6 col-xl-3">
+                  <div class="courses__item">
+                    <div class="courses__wrap"> 
+                      <div class="courses__image"><img class="courses__img" src="../images/courses_2.jpg" alt=""></div>
+                      <div class="courses__body">
+                        <h3 class="courses__label">Arbitration process</h3>
+                        <p class="courses__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                      </div>
+                    </div>
+                    <div class="teacher-block">
+                      <div class="teacher-block__wrap">
+                        <div class="teacher-block__photo"><img src="../images/teacher_1.png" alt=""></div>
+                        <div class="teacher-block__photo"><img src="../images/teacher_2.png" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="title-wrap">
+                      <div class="title-wrap__label">Сourse leads</div>
+                      <h4 class="title-wrap__text">Jenny Doe, John Mark</h4>
+                    </div>
+                    <div class="course-info">
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_1.svg" alt=""></div>
+                        <div class="course-info__name">Lessons</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_2.svg" alt=""></div>
+                        <div class="course-info__name">Registered</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_3.svg" alt=""></div>
+                        <div class="course-info__name">Currently studing</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_4.svg" alt=""></div>
+                        <div class="course-info__name">Passed</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                    </div><a class="courses__link" href="">Registration</a>
+                  </div>
+                </div>
+                <div class="courses__col col-md-6 col-xl-3">
+                  <div class="courses__item">
+                    <div class="courses__wrap"> 
+                      <div class="courses__image"><img class="courses__img" src="../images/courses_3.jpg" alt=""></div>
+                      <div class="courses__body">
+                        <h3 class="courses__label">Arbitration process</h3>
+                        <p class="courses__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                      </div>
+                    </div>
+                    <div class="teacher-block">
+                      <div class="teacher-block__wrap">
+                        <div class="teacher-block__photo"><img src="../images/teacher_1.png" alt=""></div>
+                        <div class="teacher-block__photo"><img src="../images/teacher_2.png" alt=""></div>
+                        <div class="teacher-block__photo"><img src="../images/teacher_3.png" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="title-wrap">
+                      <div class="title-wrap__label">Сourse leads</div>
+                      <h4 class="title-wrap__text">Jenny Doe, John Mark, Jenny Doe</h4>
+                    </div>
+                    <div class="course-info">
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_1.svg" alt=""></div>
+                        <div class="course-info__name">Lessons</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_2.svg" alt=""></div>
+                        <div class="course-info__name">Registered</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_3.svg" alt=""></div>
+                        <div class="course-info__name">Currently studing</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_4.svg" alt=""></div>
+                        <div class="course-info__name">Passed</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                    </div><a class="courses__link" href="">Registration</a>
+                  </div>
+                </div>
+                <div class="courses__col col-md-6 col-xl-3">
+                  <div class="courses__item">
+                    <div class="courses__wrap"> 
+                      <div class="courses__image"><img class="courses__img" src="../images/courses_1.jpg" alt=""></div>
+                      <div class="courses__body">
+                        <h3 class="courses__label">Arbitration process</h3>
+                        <p class="courses__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                      </div>
+                    </div>
+                    <div class="teacher-block">
+                      <div class="teacher-block__wrap">
+                        <div class="teacher-block__photo"><img src="../images/teacher_1.png" alt=""></div>
+                        <div class="teacher-block__photo"><img src="../images/teacher_2.png" alt=""></div>
+                        <div class="teacher-block__photo"><img src="../images/teacher_3.png" alt=""></div>
+                        <div class="teacher-block__more">
+                          <div class="teacher-block__btn" @click="showTeachers">More</div>
+                          <div class="teacher-dropdown" :class="{ 'teacher-dropdown_active': teacherActive} ">
+                            <div class="teacher-dropdown__close" @click="hideTeachers"></div>
+                            <div class="teacher-dropdown__content">
+                              <div class="teacher-dropdown__row">
+                                <div class="teacher-dropdown__image"><img class="teacher-dropdown__img" src="../images/teacher_drop.png" alt=""></div>
+                                <div class="teacher-dropdown__name">Samuel-Hopkins</div>
+                              </div>
+                              <div class="teacher-dropdown__row">
+                                <div class="teacher-dropdown__image"><img class="teacher-dropdown__img" src="../images/teacher_drop.png" alt=""></div>
+                                <div class="teacher-dropdown__name">Samuel-Hopkins</div>
+                              </div>
+                              <div class="teacher-dropdown__row">
+                                <div class="teacher-dropdown__image"><img class="teacher-dropdown__img" src="../images/teacher_drop.png" alt=""></div>
+                                <div class="teacher-dropdown__name">Samuel-Hopkins</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="title-wrap">
+                      <div class="title-wrap__label">
+                         Teacher course <br>leads</div>
+                    </div>
+                    <div class="course-info">
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_1.svg" alt=""></div>
+                        <div class="course-info__name">Lessons</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_2.svg" alt=""></div>
+                        <div class="course-info__name">Registered</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_3.svg" alt=""></div>
+                        <div class="course-info__name">Currently studing</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_4.svg" alt=""></div>
+                        <div class="course-info__name">Passed</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                    </div><a class="courses__link" href="">Registration</a>
+                  </div>
+                </div>
+                <div class="courses__col col-md-6 col-xl-3">
+                  <div class="courses__item">
+                    <div class="courses__wrap"> 
+                      <div class="courses__image"><img class="courses__img" src="../images/courses_1.jpg" alt=""></div>
+                      <div class="courses__body">
+                        <h3 class="courses__label">Arbitration process</h3>
+                        <p class="courses__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                      </div>
+                    </div>
+                    <div class="teacher-block">
+                      <div class="teacher-block__wrap">
+                        <div class="teacher-block__photo"><img src="../images/teacher_1.png" alt=""></div>
+                        <div class="teacher-block__photo"><img src="../images/teacher_2.png" alt=""></div>
+                        <div class="teacher-block__photo"><img src="../images/teacher_3.png" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="title-wrap">
+                      <div class="title-wrap__label">Сourse leads</div>
+                      <h4 class="title-wrap__text">Jenny Doe, John Mark, Mark John</h4>
+                    </div>
+                    <div class="course-info">
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_1.svg" alt=""></div>
+                        <div class="course-info__name">Lessons</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_2.svg" alt=""></div>
+                        <div class="course-info__name">Registered</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_3.svg" alt=""></div>
+                        <div class="course-info__name">Currently studing</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_4.svg" alt=""></div>
+                        <div class="course-info__name">Passed</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                    </div><a class="courses__link" href="">Registration</a>
+                  </div>
+                </div>
+                <div class="courses__col col-md-6 col-xl-3">
+                  <div class="courses__item">
+                    <div class="courses__wrap"> 
+                      <div class="courses__image"><img class="courses__img" src="../images/courses_2.jpg" alt=""></div>
+                      <div class="courses__body">
+                        <h3 class="courses__label">Arbitration process</h3>
+                        <p class="courses__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                      </div>
+                    </div>
+                    <div class="teacher-block">
+                      <div class="teacher-block__wrap">
+                        <div class="teacher-block__photo"><img src="../images/teacher_1.png" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="title-wrap">
+                      <div class="title-wrap__label">Сourse leads</div>
+                      <h4 class="title-wrap__text">Jenny Doe</h4>
+                    </div>
+                    <div class="course-info">
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_1.svg" alt=""></div>
+                        <div class="course-info__name">Lessons</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_2.svg" alt=""></div>
+                        <div class="course-info__name">Registered</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_3.svg" alt=""></div>
+                        <div class="course-info__name">Currently studing</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_4.svg" alt=""></div>
+                        <div class="course-info__name">Passed</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                    </div><a class="courses__link" href="">Registration</a>
+                  </div>
+                </div>
+                <div class="courses__col courses__col_ar col-md-6 col-xl-3">
+                  <div class="courses__item">
+                    <div class="courses__wrap"> 
+                      <div class="courses__image"><img class="courses__img" src="../images/courses_1.jpg" alt=""></div>
+                      <div class="courses__body">
+                        <h3 class="courses__label">Arbitration process</h3>
+                        <p class="courses__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                      </div>
+                    </div>
+                    <div class="teacher-block">
+                      <div class="teacher-block__wrap">
+                        <div class="teacher-block__photo"><img src="../images/teacher_1.png" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="title-wrap title-wrap_ar">
+                      <div class="title-wrap__label title-wrap__label_ar">الإمام</div>
+                      <h4 class="title-wrap__text title-wrap__text_ar">عبد العزيز بن داخل المطيري</h4>
+                    </div>
+                    <div class="course-info course-info_ar">
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info1_2.png" alt=""></div>
+                        <div class="course-info__name">دروس</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info2_2.png" alt=""></div>
+                        <div class="course-info__name">مسجل</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info3_2.png" alt=""></div>
+                        <div class="course-info__name">يدرسون الآن</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info4_2.png" alt=""></div>
+                        <div class="course-info__name">نجاح</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                    </div><a class="courses__link courses__link_ar" href="">تسجيل</a>
+                  </div>
+                </div>
+                <div class="courses__col col-md-6 col-xl-3">
+                  <div class="courses__item">
+                    <div class="courses__wrap"> 
+                      <div class="courses__image"><img class="courses__img" src="../images/courses_3.jpg" alt=""></div>
+                      <div class="courses__body">
+                        <h3 class="courses__label">Arbitration process</h3>
+                        <p class="courses__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                      </div>
+                    </div>
+                    <div class="teacher-block">
+                      <div class="teacher-block__wrap">
+                        <div class="teacher-block__photo"><img src="../images/teacher_1.png" alt=""></div>
+                        <div class="teacher-block__photo"><img src="../images/teacher_2.png" alt=""></div>
+                        <div class="teacher-block__photo"><img src="../images/teacher_3.png" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="title-wrap">
+                      <div class="title-wrap__label">Сourse leads</div>
+                      <h4 class="title-wrap__text">Jenny Doe, John Mark, Mark John</h4>
+                    </div>
+                    <div class="course-info">
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_1.svg" alt=""></div>
+                        <div class="course-info__name">Lessons</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_2.svg" alt=""></div>
+                        <div class="course-info__name">Registered</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_3.svg" alt=""></div>
+                        <div class="course-info__name">Currently studing</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_4.svg" alt=""></div>
+                        <div class="course-info__name">Passed</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                    </div><a class="courses__link" href="">Registration</a>
+                  </div>
+                </div>
+                <div class="courses__col col-md-6 col-xl-3">
+                  <div class="courses__item">
+                    <div class="courses__wrap"> 
+                      <div class="courses__image"><img class="courses__img" src="../images/courses_1.jpg" alt=""></div>
+                      <div class="courses__body">
+                        <h3 class="courses__label">Arbitration process</h3>
+                        <p class="courses__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                      </div>
+                    </div>
+                    <div class="teacher-block">
+                      <div class="teacher-block__wrap">
+                        <div class="teacher-block__photo"><img src="../images/teacher_1.png" alt=""></div>
+                        <div class="teacher-block__photo"><img src="../images/teacher_2.png" alt=""></div>
+                        <div class="teacher-block__photo"><img src="../images/teacher_3.png" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="title-wrap">
+                      <div class="title-wrap__label">Сourse leads</div>
+                      <h4 class="title-wrap__text">Jenny Doe, John Mark, Mark John</h4>
+                    </div>
+                    <div class="course-info">
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_1.svg" alt=""></div>
+                        <div class="course-info__name">Lessons</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_2.svg" alt=""></div>
+                        <div class="course-info__name">Registered</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_3.svg" alt=""></div>
+                        <div class="course-info__name">Currently studing</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_4.svg" alt=""></div>
+                        <div class="course-info__name">Passed</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                    </div><a class="courses__link" href="">Registration</a>
+                  </div>
+                </div>
+                <div class="courses__col col-md-6 col-xl-3">
+                  <div class="courses__item">
+                    <div class="courses__wrap"> 
+                      <div class="courses__image"><img class="courses__img" src="../images/courses_2.jpg" alt=""></div>
+                      <div class="courses__body">
+                        <h3 class="courses__label">Arbitration process</h3>
+                        <p class="courses__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                      </div>
+                    </div>
+                    <div class="teacher-block">
+                      <div class="teacher-block__wrap">
+                        <div class="teacher-block__photo"><img src="../images/teacher_1.png" alt=""></div>
+                        <div class="teacher-block__photo"><img src="../images/teacher_2.png" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="title-wrap">
+                      <div class="title-wrap__label">Сourse leads</div>
+                      <h4 class="title-wrap__text">Jenny Doe, John Mark</h4>
+                    </div>
+                    <div class="course-info">
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_1.svg" alt=""></div>
+                        <div class="course-info__name">Lessons</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_2.svg" alt=""></div>
+                        <div class="course-info__name">Registered</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_3.svg" alt=""></div>
+                        <div class="course-info__name">Currently studing</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_4.svg" alt=""></div>
+                        <div class="course-info__name">Passed</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                    </div><a class="courses__link" href="">Registration</a>
+                  </div>
+                </div>
+                <div class="courses__col col-md-6 col-xl-3">
+                  <div class="courses__item">
+                    <div class="courses__wrap"> 
+                      <div class="courses__image"><img class="courses__img" src="../images/courses_3.jpg" alt=""></div>
+                      <div class="courses__body">
+                        <h3 class="courses__label">Arbitration process</h3>
+                        <p class="courses__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                      </div>
+                    </div>
+                    <div class="teacher-block">
+                      <div class="teacher-block__wrap">
+                        <div class="teacher-block__photo"><img src="../images/teacher_1.png" alt=""></div>
+                        <div class="teacher-block__photo"><img src="../images/teacher_2.png" alt=""></div>
+                        <div class="teacher-block__photo"><img src="../images/teacher_3.png" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="title-wrap">
+                      <div class="title-wrap__label">Сourse leads</div>
+                      <h4 class="title-wrap__text">Jenny Doe, John Mark, Jenny Doe</h4>
+                    </div>
+                    <div class="course-info">
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_1.svg" alt=""></div>
+                        <div class="course-info__name">Lessons</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_2.svg" alt=""></div>
+                        <div class="course-info__name">Registered</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_3.svg" alt=""></div>
+                        <div class="course-info__name">Currently studing</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_4.svg" alt=""></div>
+                        <div class="course-info__name">Passed</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                    </div><a class="courses__link" href="">Registration</a>
+                  </div>
+                </div>
+                <div class="courses__col col-md-6 col-xl-3">
+                  <div class="courses__item">
+                    <div class="courses__wrap"> 
+                      <div class="courses__image"><img class="courses__img" src="../images/courses_1.jpg" alt=""></div>
+                      <div class="courses__body">
+                        <h3 class="courses__label">Arbitration process</h3>
+                        <p class="courses__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                      </div>
+                    </div>
+                    <div class="teacher-block">
+                      <div class="teacher-block__wrap">
+                        <div class="teacher-block__photo"><img src="../images/teacher_1.png" alt=""></div>
+                        <div class="teacher-block__photo"><img src="../images/teacher_2.png" alt=""></div>
+                        <div class="teacher-block__photo"><img src="../images/teacher_3.png" alt=""></div>
+                        <div class="teacher-block__more">
+                          <div class="teacher-block__btn" @click="showTeachers">More</div>
+                          <div class="teacher-dropdown" :class="{ 'teacher-dropdown_active': teacherActive} ">
+                            <div class="teacher-dropdown__close" @click="hideTeachers"></div>
+                            <div class="teacher-dropdown__content">
+                              <div class="teacher-dropdown__row">
+                                <div class="teacher-dropdown__image"><img class="teacher-dropdown__img" src="../images/teacher_drop.png" alt=""></div>
+                                <div class="teacher-dropdown__name">Samuel-Hopkins</div>
+                              </div>
+                              <div class="teacher-dropdown__row">
+                                <div class="teacher-dropdown__image"><img class="teacher-dropdown__img" src="../images/teacher_drop.png" alt=""></div>
+                                <div class="teacher-dropdown__name">Samuel-Hopkins</div>
+                              </div>
+                              <div class="teacher-dropdown__row">
+                                <div class="teacher-dropdown__image"><img class="teacher-dropdown__img" src="../images/teacher_drop.png" alt=""></div>
+                                <div class="teacher-dropdown__name">Samuel-Hopkins</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="title-wrap">
+                      <div class="title-wrap__label">
+                         Teacher course <br>leads</div>
+                    </div>
+                    <div class="course-info">
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_1.svg" alt=""></div>
+                        <div class="course-info__name">Lessons</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_2.svg" alt=""></div>
+                        <div class="course-info__name">Registered</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_3.svg" alt=""></div>
+                        <div class="course-info__name">Currently studing</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_4.svg" alt=""></div>
+                        <div class="course-info__name">Passed</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                    </div><a class="courses__link" href="">Registration</a>
+                  </div>
+                </div>
+                <div class="courses__col col-md-6 col-xl-3">
+                  <div class="courses__item">
+                    <div class="courses__wrap"> 
+                      <div class="courses__image"><img class="courses__img" src="../images/courses_1.jpg" alt=""></div>
+                      <div class="courses__body">
+                        <h3 class="courses__label">Arbitration process</h3>
+                        <p class="courses__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                      </div>
+                    </div>
+                    <div class="teacher-block">
+                      <div class="teacher-block__wrap">
+                        <div class="teacher-block__photo"><img src="../images/teacher_1.png" alt=""></div>
+                        <div class="teacher-block__photo"><img src="../images/teacher_2.png" alt=""></div>
+                        <div class="teacher-block__photo"><img src="../images/teacher_3.png" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="title-wrap">
+                      <div class="title-wrap__label">Сourse leads</div>
+                      <h4 class="title-wrap__text">Jenny Doe, John Mark, Mark John</h4>
+                    </div>
+                    <div class="course-info">
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_1.svg" alt=""></div>
+                        <div class="course-info__name">Lessons</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_2.svg" alt=""></div>
+                        <div class="course-info__name">Registered</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_3.svg" alt=""></div>
+                        <div class="course-info__name">Currently studing</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_4.svg" alt=""></div>
+                        <div class="course-info__name">Passed</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                    </div><a class="courses__link" href="">Registration</a>
+                  </div>
+                </div>
+                <div class="courses__col col-md-6 col-xl-3">
+                  <div class="courses__item">
+                    <div class="courses__wrap"> 
+                      <div class="courses__image"><img class="courses__img" src="../images/courses_2.jpg" alt=""></div>
+                      <div class="courses__body">
+                        <h3 class="courses__label">Arbitration process</h3>
+                        <p class="courses__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                      </div>
+                    </div>
+                    <div class="teacher-block">
+                      <div class="teacher-block__wrap">
+                        <div class="teacher-block__photo"><img src="../images/teacher_1.png" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="title-wrap">
+                      <div class="title-wrap__label">Сourse leads</div>
+                      <h4 class="title-wrap__text">Jenny Doe</h4>
+                    </div>
+                    <div class="course-info">
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_1.svg" alt=""></div>
+                        <div class="course-info__name">Lessons</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_2.svg" alt=""></div>
+                        <div class="course-info__name">Registered</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_3.svg" alt=""></div>
+                        <div class="course-info__name">Currently studing</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info_4.svg" alt=""></div>
+                        <div class="course-info__name">Passed</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                    </div><a class="courses__link" href="">Registration</a>
+                  </div>
+                </div>
+                <div class="courses__col courses__col_ar col-md-6 col-xl-3">
+                  <div class="courses__item">
+                    <div class="courses__wrap"> 
+                      <div class="courses__image"><img class="courses__img" src="../images/courses_1.jpg" alt=""></div>
+                      <div class="courses__body">
+                        <h3 class="courses__label">Arbitration process</h3>
+                        <p class="courses__text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                      </div>
+                    </div>
+                    <div class="teacher-block">
+                      <div class="teacher-block__wrap">
+                        <div class="teacher-block__photo"><img src="../images/teacher_1.png" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="title-wrap title-wrap_ar">
+                      <div class="title-wrap__label title-wrap__label_ar">الإمام</div>
+                      <h4 class="title-wrap__text title-wrap__text_ar">عبد العزيز بن داخل المطيري</h4>
+                    </div>
+                    <div class="course-info course-info_ar">
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info1_2.png" alt=""></div>
+                        <div class="course-info__name">دروس</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info2_2.png" alt=""></div>
+                        <div class="course-info__name">مسجل</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info3_2.png" alt=""></div>
+                        <div class="course-info__name">يدرسون الآن</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                      <div class="course-info__item">
+                        <div class="course-info__icon"><img class="course-info__img" src="../images/info4_2.png" alt=""></div>
+                        <div class="course-info__name">نجاح</div>
+                        <div class="course-info__count">15</div>
+                      </div>
+                    </div><a class="courses__link courses__link_ar" href="">تسجيل</a>
+                  </div>
+                </div>
+              </div>
+              <div class="courses__footer">
+                <nav class="pagination">
+                  <ul class="pagination__content">
+                    <li class="pagination__item pagination__item_arrow"><a class="pagination__arrow pagination__arrow_prev" href="#">Previous</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="#">1</a></li>
+                    <li class="pagination__item"><a class="pagination__link pagination__link_current" href="#">2</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="#">5</a></li>
+                    <li class="pagination__item"><a class="pagination__dots" href="#">...</a></li>
+                    <li class="pagination__item pagination__item_arrow"><a class="pagination__arrow pagination__arrow_next" href="#">Next</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer__content"><a class="footer__logo" href="/"><img class="footer__image" src="../images/logo_footer.svg" alt=""></a>
+          <nav class="navigation navigation_footer">
+            <div class="navigation__content navigation__content_footer"><a class="navigation__link navigation__link_footer" href="#">Home</a><a class="navigation__link navigation__link_footer" href="#">Tests</a><a class="navigation__link navigation__link_footer" href="#">Student records</a><a class="navigation__link navigation__link_footer" href="#">Forums</a><a class="navigation__link navigation__link_footer" href="#">Articles</a><a class="navigation__link navigation__link_footer" href="#">Q&amp;A Library</a><a class="navigation__link navigation__link_footer" href="#">Certificates</a><a class="navigation__link navigation__link_footer" href="#">Help</a>
+            </div>
+          </nav>
+          <div class="statistics">
+            <div class="statistics__item"><b>Number of students</b>1500
+            </div>
+            <div class="statistics__item"><b>Number of teachers</b>50
+            </div>
+            <div class="statistics__item"><b>Number of courses</b>300
+            </div>
+            <div class="statistics__item"><b>Total number of trainees in all courses</b>600
+            </div>
+            <div class="statistics__item"><b>Total number of students currently</b>500
+            </div>
+          </div>
+          <div class="socials socials_footer"><a class="socials__link socials__link_footer socials__link_1" href="#" target="_blank"></a><a class="socials__link socials__link_footer socials__link_2" href="#" target="_blank"></a><a class="socials__link socials__link_footer socials__link_3" href="#" target="_blank"></a><a class="socials__link socials__link_footer socials__link_4" href="#" target="_blank"></a><a class="socials__link socials__link_footer socials__link_5" href="#" target="_blank"></a>
+          </div>
+          <p class="footer__copyright">
+            © Copyright 2018. All Rights Reserved111 Your Street, Your City, Your State 11111, 
+            Your Country davinci.alidropship.com
+            
+          </p>
+        </div>
+        <div class="arrow-up"></div>
+        <div class="all_pages">
+          <div class="page_point"></div>
+          <ul class="page_list">
+            <li><a href="home.html">home</a></li>
+            <li><a href="course.html">course</a></li>
+            <li><a href="login.html">login</a></li>
+            <li><a href="register.html">register</a></li>
+            <li><a href="articles.html">articles</a></li>
+            <li><a href="article.html">article</a></li>
+            <li><a href="study_plans.html">study plans</a></li>
+            <li><a href="qa_library.html">QA library</a></li>
+            <li><a href="certificates.html">certificates</a></li>
+            <li><a href="download_video.html">download video</a></li>
+            <li><a href="download_books.html">download books</a></li>
+            <li><a href="download_audio.html">download audio</a></li>
+            <li><a href="download_doc.html">download document</a></li>
+            <li><a href="download_other.html">download other</a></li>
+            <li><a href="download_image.html">download image</a></li>
+            <li><a href="course_page.html">course page</a></li>
+            <li><a href="test_1.html">test 1</a></li>
+            <li><a href="test_2.html">test 2</a></li>
+            <li><a href="test_3.html">test 3</a></li>
+            <li><a href="test_4.html">test 4</a></li>
+            <li><a href="search.html">search</a></li>
+          </ul>
+        </div>
+      </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://unpkg.com/vue"></script>
+      <script src="../js/slick.min.js"></script>
+      <script src="../js/selectize.min.js"></script>
+      <script src="../js/datepicker.js"></script>
+      <script src="../js/current-device.min.js"></script>
+      <script src="../js/jquery.livequery.min.js"></script>
+      <script src="../js/plyr.js"></script>
+      <script>
+        function readURL(input) {
+        	if (input.files && input.files[0]) {
+        		var reader = new FileReader();
+        		reader.onload = function (e) {
+        			$('.form__images').append('<div class="img_wrap"><img src="'+e.target.result+'" alt="" class="upload-image"></div>')
+        		};
+        		reader.readAsDataURL(input.files[0]);
+        	}
+        }
+      </script>
+      <script src="../js/main.js"></script>
+      <script src="../js/app.js"></script>
+    </main>
+  </body>
+</html>

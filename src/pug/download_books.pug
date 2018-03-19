@@ -1,0 +1,149 @@
+extend includes/base/head
+block head
+	main.wrapper.wrapper_not-front
+		.wrapper__content.wrapper__content_backing
+			include includes/base/header.pug
+			.wrapper__middle
+				include includes/base/navigation.pug
+				.container-fluid
+					.page__title Downloads
+					.download.download_video
+						.download-nav
+							nav.download-nav__wrap
+								- var titles = ['Books', 'Documents', 'Videos', 'Sounds', 'Images', 'Others'];
+								- var active = 'download-nav__link_active';
+								each title, key in titles
+									if key == 1
+										a(
+											href="#"
+											class="download-nav__link " + active
+										)=title
+									else
+										a(
+											href="#"
+											class="download-nav__link "
+										)=title
+						form.download-filter
+								.download-filter__row
+									.download-filter__label Sort:
+									.download-filter__wrap
+										.download-filter__item
+											- var x = 5;
+											label.item-label Subject
+											select
+												- for (var i=1; i<=x; i++) {
+													option(value="Subject " + i)='Subject ' + i
+												- }
+										.download-filter__item
+											label.item-label Course name
+											select
+												- for (var i=1; i<=x; i++) {
+													option(value="Course #" + i)='Course #' + i
+												- }
+										.download-filter__item
+											label.item-label Teacher name
+											select
+												- for (var i=1; i<=x; i++) {
+													option(value="Teacher #" + i)='Teacher #' + i
+												- }
+									.download-filter__wrap
+										.download-filter__label Sort:
+										.download-filter__sort
+											.form__checkboxes
+												input.form__checkbox(
+													type="checkbox"
+													name="new"
+													id="new"
+												)
+												label(
+													for="new"
+												) New at the top
+											.form__checkboxes
+												input.form__checkbox(
+													type="checkbox"
+													name="old"
+													id="old"
+												)
+												label(
+													for="old"
+												) Old at the top
+											.filter__item.filter__item_name
+												select
+													option(class="sort" value="Course names")
+													option(class="sort2" value="Course names2")
+						.download__content.row
+							- var count = 12;
+							- for (var i = 1; i <= count; i++){
+								- var image;
+								if i == 1 || i ==4 || i == 9
+									- var image = "../images/base_book.jpg";
+								else 
+									- var image = "../images/book.jpg";
+								.download__col.col-xl-2.col-md-4
+									.download__item
+										if i == 1 || i ==4 || i == 9
+											.download__header.download__header_base
+												.download__books.download__books_pure
+													img.download__book(
+														src=image
+														alt=""
+													)
+												h3.download__title.download__title_base Lorem Ipsum is simply
+												a.download__btn(href="#") Download
+										else
+											.download__header
+												.download__books
+													img.download__book(
+														src=image
+														alt=""
+													)
+												h3.download__title Lorem Ipsum is simply
+												a.download__btn(href="#") Download
+										.download__container
+											.download__author
+													.download__image
+														img.download__img(
+															src="../images/article_author.png"
+														)
+													.download__body
+														.download__post Supervisor
+														.download__name Jenny Doe
+											.download-info
+												.download-info__row
+													.download-info__label Downloads
+													.download-info__value.download-info__value_download 200
+												.download-info__row
+													.download-info__label Comments
+													.download-info__value.download-info__value_comment 3105
+												.download-info__row
+													.download-info__label Size
+													.download-info__value.download-info__value_size 26 mb.
+												.download-info__row
+													.download-info__label Shared
+													.download-info__value.download-info__value_share 200
+											.share.share_download
+												a.share__link.share__link_download.share__link_1(href="#")
+												a.share__link.share__link_download.share__link_2(href="#")
+												a.share__link.share__link_download.share__link_5(href="#")
+							- }
+						.single-nav
+							.single-nav__arrows
+								a.single-nav__arrow.single-nav__arrow_disabled.single-nav__arrow_prev(href="#") Prev
+								a.single-nav__arrow.single-nav__arrow_next(href="#") Next
+							ul.single-nav__dots
+								- var x = 60;
+								- var activeLink = 'single-nav__link_active';
+								- for (var i=1; i<=x; i++) {
+									li.single-nav__item
+										if i == 12
+											dsfdsf
+											a(
+												href="#",
+												class="single-nav__link" + " " + activeLink
+											) Link
+										else
+											a.single-nav__link(href="#") Link
+								- }
+					// include includes/pager.pug
+
+		include includes/base/footer.pug

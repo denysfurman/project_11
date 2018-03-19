@@ -1,0 +1,128 @@
+.article-header{
+	padding: 22px 30px 8px;
+	border-bottom: 1px solid #e9e9e9;
+	&__row{
+		display: flex;
+		justify-content: space-between;
+	}
+	&__title{
+		font-size: 30px;
+		font-weight: 700;
+		max-width: 630px;
+		line-height: 1.46;
+		margin: 0 0 19px;
+		text-transform: uppercase;
+		@include media(phone){
+			padding-right: 30px;
+			line-height: 1.2;
+			font-size: 20px;
+		}
+	}
+	&__print{
+		position: relative;
+		width: 32px;
+		height: 32px;
+		text-indent: -9999px;
+		top: 10px;
+		@include media(phone){
+			width: 24px;
+			height: 24px;
+		}
+		&::after{
+			content: '\e917';
+			@include font;
+			font-size: 32px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			text-indent: 0;
+			color: #9d9d9d;
+			transition: .4s;
+			@include media(phone){
+				font-size: 24px;
+			}
+		}
+		&:hover{
+			&::after{
+				color: $color_brand;
+			}
+		}
+	}
+	&__wrap{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		@include media(phone){
+			justify-content: center;
+		}
+	}
+	&__author{
+		display: flex;
+		align-items: center;
+		font-size: 16px;
+		font-style: italic;
+		@include media(phone){
+			margin-bottom: 10px;
+		}
+	}
+	&__image{
+		flex: 0 0 33px;
+		max-width: 33px;
+		margin-right: 13px;
+	}
+	&__img{
+		border-radius: 50%;
+	}
+	&__name{
+		font-weight: 700;
+		margin-left: 4px;
+	}
+	&__date{
+		color: #9d9d9d;
+		padding-left: 13px;
+		@include media(phone){
+			display: none;
+		}
+	}
+	&__info{
+		display: flex;
+		@include media(phone){
+			justify-content: center;
+		}
+	}
+	&__comments,
+	&__shares,
+	&__view{
+		margin-left: 30px;
+		display: flex;
+		justify-content: center;
+		color: #9d9d9d;
+		font-size: 16px;
+		align-items: center;
+		position: relative;
+		@include media(lg){
+			flex: 0 0 17.6%;
+			max-width: 17.6%;
+		}
+		&::before{
+			content: '\e90f';
+			@include font;
+			color: #9d9d9d;
+			font-size: 15px;
+			padding-right: 7px;
+		}
+	}
+	&__comments{
+		&::before{
+			content: '\e911';
+			font-size: 12px;
+		}
+	}
+	&__shares{
+		&::before{
+			content: '\e910';
+			font-size: 11px;
+		}
+	}
+}

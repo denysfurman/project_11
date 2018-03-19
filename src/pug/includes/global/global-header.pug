@@ -1,0 +1,50 @@
+.global-header
+	h1.global-header__title Advanced search
+	form.global-header__search
+		.search.search_global
+			input.form__text.form__text_mod.form-control(
+				placeholder="Search"
+			)
+			input.search__submit(
+				type="submit"
+				value="Search"
+			)
+		.global-header__content
+			.global-header__col
+				- var names = ['All','Articles','Downloads'];
+				each name, key in names
+					.form__checkboxes
+						input.form__checkbox(
+							type="checkbox"
+							name="search_" + key
+							id="search_" + key
+						)
+						label(
+							for="search_" + key
+						)=name
+			.global-header__col
+				- var names = ['Lessons','News','Course name'];
+				each name, key in names
+					- var key2 = key + 3
+					.form__checkboxes
+						input.form__checkbox(
+							type="checkbox"
+							name="search_" + key2
+							id="search_" + key2
+						)
+						label(
+							for="search_" + key2
+						)=name
+			.global-header__col
+				- var names = ['Q & A Library','Forums','Member name'];
+				each name, key in names
+					- var key3 = key + 6
+					.form__checkboxes
+						input.form__checkbox(
+							type="checkbox"
+							name="search_" + key3
+							id="search_" + key3
+						)
+						label(
+							for="search_" + key3
+						)=name

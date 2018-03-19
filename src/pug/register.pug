@@ -1,0 +1,109 @@
+extend includes/base/head
+block head
+	main.wrapper.wrapper_not-front
+		.wrapper__content.wrapper__content_backing
+			include includes/base/header.pug
+			.wrapper__middle
+				include includes/base/navigation.pug
+				.container-fluid
+					form.form.form-user.form_login.form_register
+						.form__title.form__title_register 
+							| REGISTRATION
+							br
+							| to Imufasser institute
+						.form__subtitle Please indicate your name and surname
+						.form__item.form-group
+							label.form__label Nick name
+							input.form__text.form__text_mod.form-control(
+								type="text"
+							)
+						.form__item.form-group
+							label.form__label First name
+							input.form__text.form__text_mod.form-control(
+								type="text"
+							)
+						.form__item.form-group
+							label.form__label Father name
+							input.form__text.form__text_mod.form-control(
+								type="text"
+							)
+						.form__item.form-group
+							label.form__label Family name
+							input.form__text.form__text_mod.form-control(
+								type="text"
+							)
+						.form__item.form-group
+							label.form__label E-mail
+							input.form__text.form__text_mod.form-control(
+								type="email"
+							)
+						.form__item.form-group
+							label.form__label Mobile number
+							input.form__text.form__text_mod.form-control(
+								type="text"
+							)
+						.form__item.form__item_sex.form-group
+							label.form__sex.form__label Sex
+							.form_radio-btns
+								.form__radios
+									input.form__radio(
+										type="radio"
+										name="sex"
+										id="female"
+										checked
+									)
+									label(
+										for="female"
+									) Female
+								.form__radios
+									input.form__radio(
+										type="radio"
+										name="sex"
+										id="male"
+									)
+									label(
+										for="male"
+									) Male
+						.form__item.form__item_date.form-group
+							label.form__label Date of Birth
+							input.form__text.form__text_mod.form__text_date.form-control(
+								type="text"
+							)
+						.form__item.form-group
+							label.form__label Nationality
+							select(name="nationality")
+								option(value="Ukrainian") Arabian
+								option(value="Arabian") Ukrainian
+						.form__item.form-group
+							label.form__label Country
+							select(name="nationality")
+								option(value="Ukraine") Saudi Arabia
+								option(value="OAE") Ukraine
+						.form__item.form-group
+							label.form__label City
+							select(name="nationality")
+								option(value="Dubai") Dubai
+								option(value="Vinnitsia") Vinnitsia
+						.form__item.form-group
+							label.form__label Education level
+							select(name="nationality")
+								option(value="Level 1") Level 1
+								option(value="Level 2") Level 2
+								option(value="Level 3") Level 3
+						.form__item.form-group.form__item_image
+							label.form__label Attach the image of the qualification
+							.form__images
+								.form__images-wrap
+									label(for="registrationImage") Add image
+									input.form__image.form__image_register.form-control(
+										type="file"
+										id="registrationImage"
+										name="registration[image]"
+										onchange="readURL(this)"
+									)
+						.form__actions
+							input.form__submit(
+								type="submit"
+								value="Registration"
+							)
+		include includes/base/footer.pug

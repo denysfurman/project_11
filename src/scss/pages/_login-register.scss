@@ -1,0 +1,212 @@
+.form{
+	&-user{
+		max-width: 570px;
+		background: #fff;
+		margin: 95px auto 160px;
+		padding: 31px 29px 29px;
+		box-shadow: 25px 16px 40px rgba(0, 0, 0, 0.1);
+		@include media(phone){
+			margin: 0px auto 30px;
+			@include media(phone){
+				padding: 15px;
+			}
+		}
+		.form__item{
+			margin-bottom: 20px;
+		}
+	}
+	&__title{
+		text-align: center;
+		font-size: 24px;
+		font-weight: 300;
+		margin-bottom: 27px;
+		&_register{
+			margin-bottom: 14px;
+		}
+	}
+	&__subtitle{
+		font-size: 16px;
+		text-align: center;
+		margin-bottom: 25px;
+	}
+	&__actions{
+		text-align: center;
+	}
+	&__submit{
+		@include btn($color_submit);
+	}
+	&__footer{
+		padding: 15px 30px;
+		text-align: center;
+		font-size: 16px;
+	}
+	&__link{
+		color: $color_brand !important;
+		font-weight: 300;
+		&_forgot{
+			text-decoration: underline;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+	&__info{
+		padding-top: 7px;
+	}
+	&__item{
+		&_date{
+			position: relative;
+			&::after{
+				content: '\e90d';
+				@include font;
+				font-size: 18px;
+				position: absolute;
+				right: 30px;
+				bottom: 11px;
+			}
+		}
+	}
+	&__text{
+		&_date{
+			padding-right: 55px;
+		}
+	}
+	&__image{
+		&_register{
+			display: none;
+		}
+	}
+	&_header{
+		margin: 0;
+		padding: 15px;
+		width: 300px;
+		z-index: 80;
+		background: transparent;
+		box-shadow: none;
+		@include media(phone){
+			margin: 0 auto;
+		}
+		.form__actions{
+			display: flex;
+		}
+		.form__item{
+			margin-bottom: 15px;
+			@include media(lg){
+				margin-bottom: 8px;
+			}
+		}
+		.form__checkboxes{
+			margin-bottom: 15px;
+			@include media(lg){
+				margin-bottom: 8px;
+			}
+			label{
+				&::before{
+					background: #fff;
+				}
+			}
+		}
+		.form__text{
+			@include media(lg){
+				height: 30px;
+			}
+		}
+		.form__submit{
+			@include btn($color_submit);
+			min-width: 130px;
+			@include media(lg){
+				height: 30px;
+				padding: 4px 15px;
+				font-size: 14px;
+				.windows &{
+					padding-top: 8px;
+				}
+			}
+		}
+	}
+	&_register{
+		.form__item{
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			&.form__item_sex{
+				justify-content: flex-start;
+			}
+			&_image{
+				justify-content: flex-start;
+			}
+		}
+		.form__label{
+			flex: 0 0 27%;
+			margin-bottom: 0;
+			text-align: right;
+			@include media(phone){
+				flex: 0 0 100%;
+				text-align: center;
+				margin-bottom: 2px;
+			}
+		}
+		.selectize-control,
+		.form__text{
+			flex: 0 0 70%;
+			@include media(phone){
+				flex: 0 0 100%;
+			}
+		}
+	}
+	&_radio-btns{
+		display: flex;
+		margin-left: 3%;
+		label{
+			margin-bottom: 5px;
+		}
+		.form__radios{
+			margin-right: 25px;
+			@include media(phone){
+				margin-left: 0;
+				flex: 0 0 50%;
+			}
+		}
+	}
+}
+
+.register-btn{
+	@include btn($color_submit);
+	min-width: 130px;
+	@include media(lg){
+		height: 30px;
+		padding: 6px 15px;
+		font-size: 14px;
+		.windows &{
+			padding-top: 8px;
+		}
+	}
+}
+
+.form__images{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 0 10px;
+	margin-left: 3%;
+	&-wrap{
+		display: flex;
+	}
+	label{
+		@include btn($color_brand);
+		cursor: pointer;
+		font-size: 14px;
+		margin-bottom: 0;
+		&:hover{
+			background: $color_submit;
+		}
+	}
+	.img_wrap{
+		padding-top: 10px;
+		max-width: 250px;
+		width: 100%;
+		height: auto;
+	}
+}

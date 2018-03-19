@@ -1,0 +1,17 @@
+.related-posts
+	h2.sidebar__title
+		span YOU MAY ALSO LIKE
+	.related-posts__content.row
+		- var x = 6;
+		- for(var i = 1; i<=x; i++) {
+			.related-posts__item.col-md-4.col-xl-6
+				.related-posts__image
+					img.related-posts__img(
+						src="../images/related.jpg",
+						alt=""
+					)
+				.related-posts__body
+					a.related-posts__title Lorem Ipsum is simply dummy text of the printing 
+					p.related-posts__text It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem
+					a.related-posts__link(href="#") Read more
+		- }

@@ -1,0 +1,48 @@
+extend includes/base/head
+block head
+	main.wrapper.wrapper_not-front
+		.wrapper__content.wrapper__content_backing
+			include includes/base/header.pug
+			.wrapper__middle
+				include includes/base/navigation.pug
+				.container-fluid
+					.breadcrumbs
+						a.breadcrumbs__link.breadcrumbs__link_home(href="home.html") Home
+						span.breadcrumbs__sep /
+						span.breadcrumbs__this Q & A Library
+					.library
+						form.articles-filter
+							.articles-filter__wrap
+								.articles-filter__title Type a new question
+								.articles-filter__label Sort
+								.articles-filter__item
+									- var x = 5;
+									select
+										- for (var i=1; i<=x; i++) {
+											option(value="Course name " + i)='Course name ' + i
+										- }
+						.library__content
+							.library__wrap
+								table.base-table.base-table_library
+									thead
+										tr
+											th.base-table__id ID
+											th.base-table__name Question title
+											th.base-table__teacher.base-table__asc Course
+											th.base-table__date.base-table__asc Questioner
+											th.base-table__class Answerer
+											th.base-table__section Views
+									tbody
+										- var count = 25;
+										- for (var i = 1; i <= count; i++){
+											tr
+												td.base-table__id 8564789
+												td.base-table__name 
+													a(href="#") Question 1
+												td.base-table__teacher Coure 1
+												td.base-table__date Questioner 1
+												td.base-table__class Answerer
+												td.base-table__section 10 000 000
+										- }
+							include includes/pager.pug
+		include includes/base/footer.pug

@@ -1,0 +1,27 @@
+.related-posts{
+	&__body{
+		background: #fff;
+		border: 1px solid #e9e9e9;
+		border-top: none;
+		margin-bottom: 20px;
+		padding: 13px 20px;
+		border-radius: 0 0 0 38px;
+	}
+	&__img{
+		border-radius: 0 38px 0 0;
+	}
+	&__title{
+		font-weight: 700;
+		display: block;
+		margin-bottom: 5px;
+	}
+	&__text{
+		line-height: 1.7;
+		margin-bottom: 10px;
+	}
+	&__link{
+		color: $color_brand;
+		display: flex;
+		justify-content: flex-end;
+	}
+}

@@ -1,0 +1,66 @@
+section.courses.courses_global
+    h3.global__title Course (res.4)
+    .courses__content.row
+        .courses__col.col-md-6.col-xl-2
+            .courses__item
+                .courses__wrap  
+                    .courses__image
+                        img.courses__img(
+                            src="../images/courses_1.jpg", alt=""
+                        )
+                    .courses__body
+                        h3.courses__label Lorem ipsum dolor sit amet
+                .teacher-block
+                    .teacher-block__wrap
+                        - var x = 2;
+                        - for (var i=1; i<=x; i++) {
+                            .teacher-block__photo
+                                img(
+                                    src='../images/teacher_'+ i +'.png', alt=""
+                                )
+                        - }
+                        .teacher-block__more
+                            .teacher-block__btn(
+                                @click="showTeachers"
+                            ) More
+                            .teacher-dropdown(
+                                :class="{ 'teacher-dropdown_active': teacherActive} "
+                            )
+                                .teacher-dropdown__close(
+                                    @click="hideTeachers"
+                                )
+                                .teacher-dropdown__content
+                                    - var x = 3;
+                                    - for (var i=1; i<=x; i++) {
+                                        .teacher-dropdown__row
+                                            .teacher-dropdown__image
+                                                img.teacher-dropdown__img(
+                                                    src="../images/teacher_drop.png",
+                                                    alt=""
+                                                )
+                                            .teacher-dropdown__name Samuel-Hopkins
+                                    - }
+                                    
+                .title-wrap
+                    .title-wrap__label 
+                        |Teacher course 
+                        br
+                        |leads
+                .course-info
+                    .course-info__row
+                        .course-info__col
+                            .course-info__label Lessons
+                            .course-info__value 15
+                        .course-info__col
+                            .course-info__label Registered
+                            .course-info__value 150
+                    .course-info__row
+                        .course-info__col
+                            .course-info__label Currently studing
+                            .course-info__value 45
+                        .course-info__col
+                            .course-info__label Passed
+                            .course-info__value 15
+                a.courses__link(
+                    href=""
+                ) Registration

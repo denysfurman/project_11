@@ -1,0 +1,34 @@
+extend includes/base/head
+block head
+	main.wrapper.wrapper_not-front
+		.wrapper__content.wrapper__content_backing
+			include includes/base/header.pug
+			.wrapper__middle
+				include includes/base/navigation.pug
+				.container-fluid
+					form.form.form-user.form_login
+						.form__title 
+							| LOG IN
+							br
+							| to Katoob education
+						.form__item.form-group
+							input.form__text.form__text_big.form-control(
+								type="email"
+								placeholder="E-mail"
+							)
+						.form__item.form-group
+							input.form__text.form__text_big.form-control(
+								type="password"
+								placeholder="Password"
+							)
+						.form__actions
+							input.form__submit(
+								type="submit"
+								value="Enter"
+							)
+						.form__footer
+							a.form__link.form__link_forgot(href="#") I forgot my password.
+							.form__info 
+								| I don't have a 
+								a.form__link(href="#") Katoob education account.
+		include includes/base/footer.pug

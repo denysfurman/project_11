@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Imufasser</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/datepicker.css">
+    <link rel="stylesheet" href="../css/plyr.css">
+    <link rel="stylesheet" href="../css/style.min.css">
+  </head>
+  <body>
+    <main class="wrapper wrapper_not-front">
+      <div class="wrapper__content wrapper__content_backing">
+        <header class="header">
+          <div class="header__actions">
+            <div class="header__content container-fluid">
+              <div class="menu-btn">
+                <div class="menu-btn__item"></div>
+                <div class="menu-btn__item"></div>
+                <div class="menu-btn__item"></div>
+              </div>
+              <div class="search__btn"></div>
+              <div class="search">
+                <input class="form__text form__text_mod form-control" placeholder="Search">
+                <input class="search__submit" type="submit" value="Search">
+              </div>
+              <div class="socials"><a class="socials__link socials__link_1" href="#" target="_blank"></a><a class="socials__link socials__link_2" href="#" target="_blank"></a><a class="socials__link socials__link_3" href="#" target="_blank"></a><a class="socials__link socials__link_4" href="#" target="_blank"></a><a class="socials__link socials__link_5" href="#" target="_blank"></a>
+              </div>
+            </div>
+          </div>
+          <div class="header__content container-fluid">
+            <div class="header__info"><a class="header__phone" href="tel:+966505941199">+966 505941199</a>
+              <ul class="language">
+                <li class="language__item language__item_first language__item_ar"><a class="language__link" href="#">العربية</a></li>
+                <li class="language__item language__item_last"><a class="language__link language__link_active language__link_en" href="#">Eng</a></li>
+              </ul>
+            </div><a class="logo" href="home.html"><img class="logo__image" src="../images/logo.svg" alt="">
+              <div class="logo__text">www.imufasser.com</div></a>
+            <div class="sign">
+              <div class="sign__user">
+                <div class="sign__photo"><img class="sign__img" src="../images/user.png" alt=""></div>
+                <div class="sign__name">Jenny Doe</div>
+                <div class="sign__btn"></div>
+                <ul class="sign-dropdown">
+                  <li class="sign-dropdown__item"><a class="sign-dropdown__link" href="#">Profile</a></li>
+                  <li class="sign-dropdown__item"><a class="sign-dropdown__link" href="#">Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="wrapper__middle">
+          <nav class="navigation navigation_header">
+            <div class="navigation__content"><a class="navigation__link navigation__link_header navigation__link_active" href="#">Home</a><a class="navigation__link navigation__link_header " href="#">Course</a><a class="navigation__link navigation__link_header " href="#">Study Plans</a><a class="navigation__link navigation__link_header " href="#">Q&amp;A Library</a><a class="navigation__link navigation__link_header " href="#">Forums</a><a class="navigation__link navigation__link_header " href="#">Articles</a><a class="navigation__link navigation__link_header " href="#">Student records</a><a class="navigation__link navigation__link_header " href="#">Exams</a><a class="navigation__link navigation__link_header " href="#">Certificates</a><a class="navigation__link navigation__link_header " href="#">Help</a>
+            </div>
+          </nav>
+          <div class="container-fluid">
+            <div class="page__title">Downloads</div>
+            <div class="download download_video">
+              <div class="download-nav">
+                <nav class="download-nav__wrap"><a class="download-nav__link " href="#">Books</a><a class="download-nav__link " href="#">Documents</a><a class="download-nav__link " href="#">Videos</a><a class="download-nav__link " href="#">Sounds</a><a class="download-nav__link " href="#">Images</a><a class="download-nav__link download-nav__link_active" href="#">Others</a>
+                </nav>
+              </div>
+              <form class="download-filter">
+                <div class="download-filter__row">
+                  <div class="download-filter__label">Sort:</div>
+                  <div class="download-filter__wrap">
+                    <div class="download-filter__item">
+                      <label class="item-label">Subject</label>
+                      <select>
+                        <option value="Subject 1">Subject 1</option>
+                        <option value="Subject 2">Subject 2</option>
+                        <option value="Subject 3">Subject 3</option>
+                        <option value="Subject 4">Subject 4</option>
+                        <option value="Subject 5">Subject 5</option>
+                      </select>
+                    </div>
+                    <div class="download-filter__item">
+                      <label class="item-label">Course name</label>
+                      <select>
+                        <option value="Course #1">Course #1</option>
+                        <option value="Course #2">Course #2</option>
+                        <option value="Course #3">Course #3</option>
+                        <option value="Course #4">Course #4</option>
+                        <option value="Course #5">Course #5</option>
+                      </select>
+                    </div>
+                    <div class="download-filter__item">
+                      <label class="item-label">Teacher name</label>
+                      <select>
+                        <option value="Teacher #1">Teacher #1</option>
+                        <option value="Teacher #2">Teacher #2</option>
+                        <option value="Teacher #3">Teacher #3</option>
+                        <option value="Teacher #4">Teacher #4</option>
+                        <option value="Teacher #5">Teacher #5</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="download-filter__wrap">
+                    <div class="download-filter__label">Sort:</div>
+                    <div class="download-filter__sort">
+                      <div class="form__checkboxes">
+                        <input class="form__checkbox" type="checkbox" name="new" id="new">
+                        <label for="new">New at the top</label>
+                      </div>
+                      <div class="form__checkboxes">
+                        <input class="form__checkbox" type="checkbox" name="old" id="old">
+                        <label for="old">Old at the top</label>
+                      </div>
+                      <div class="filter__item filter__item_name">
+                        <select>
+                          <option class="sort" value="Course names"></option>
+                          <option class="sort2" value="Course names2"></option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <div class="download__content row">
+                <div class="download__col col-xl-2 col-md-4">
+                  <div class="download__item download__item_photo">
+                    <div class="download__wrap download__wrap_author">
+                      <div class="download__photos"><img class="download__photo" src="../images/download_image.jpg"></div>
+                      <div class="download__author download__author_other">
+                        <div class="download__image"><img class="download__img" src="../images/article_author.png"></div>
+                        <div class="download__body">
+                          <div class="download__name">Jenny Doe</div>
+                          <div class="download__post">Author</div>
+                        </div>
+                      </div>
+                      <div class="form__checkboxes">
+                        <input class="form__checkbox" type="checkbox" name="check_1" id="check_1">
+                        <label for="check_1"></label>
+                      </div>
+                    </div>
+                    <h3 class="download__title download__title_other">Lorem Ipsum is simply</h3>
+                    <div class="download__wrap download__wrap_photo"><a class="download__btn download__btn_other" href="#">Download</a></div>
+                    <div class="share share_download share_other"><a class="share__link share__link_download share__link_1" href="#"></a><a class="share__link share__link_download share__link_2" href="#"></a><a class="share__link share__link_download share__link_5" href="#"></a></div>
+                  </div>
+                </div>
+                <div class="download__col col-xl-2 col-md-4">
+                  <div class="download__item download__item_photo">
+                    <div class="download__wrap download__wrap_author">
+                      <div class="download__photos"><img class="download__photo" src="../images/download_image.jpg"></div>
+                      <div class="download__author download__author_other">
+                        <div class="download__image"><img class="download__img" src="../images/article_author.png"></div>
+                        <div class="download__body">
+                          <div class="download__name">Jenny Doe</div>
+                          <div class="download__post">Author</div>
+                        </div>
+                      </div>
+                      <div class="form__checkboxes">
+                        <input class="form__checkbox" type="checkbox" name="check_2" id="check_2">
+                        <label for="check_2"></label>
+                      </div>
+                    </div>
+                    <h3 class="download__title download__title_other">Lorem Ipsum is simply</h3>
+                    <div class="download__wrap download__wrap_photo"><a class="download__btn download__btn_other" href="#">Download</a></div>
+                    <div class="share share_download share_other"><a class="share__link share__link_download share__link_1" href="#"></a><a class="share__link share__link_download share__link_2" href="#"></a><a class="share__link share__link_download share__link_5" href="#"></a></div>
+                  </div>
+                </div>
+                <div class="download__col col-xl-2 col-md-4">
+                  <div class="download__item download__item_photo">
+                    <div class="download__wrap download__wrap_author">
+                      <div class="download__photos"><img class="download__photo" src="../images/download_image.jpg"></div>
+                      <div class="download__author download__author_other">
+                        <div class="download__image"><img class="download__img" src="../images/article_author.png"></div>
+                        <div class="download__body">
+                          <div class="download__name">Jenny Doe</div>
+                          <div class="download__post">Author</div>
+                        </div>
+                      </div>
+                      <div class="form__checkboxes">
+                        <input class="form__checkbox" type="checkbox" name="check_3" id="check_3">
+                        <label for="check_3"></label>
+                      </div>
+                    </div>
+                    <h3 class="download__title download__title_other">Lorem Ipsum is simply</h3>
+                    <div class="download__wrap download__wrap_photo"><a class="download__btn download__btn_other" href="#">Download</a></div>
+                    <div class="share share_download share_other"><a class="share__link share__link_download share__link_1" href="#"></a><a class="share__link share__link_download share__link_2" href="#"></a><a class="share__link share__link_download share__link_5" href="#"></a></div>
+                  </div>
+                </div>
+                <div class="download__col col-xl-2 col-md-4">
+                  <div class="download__item download__item_photo">
+                    <div class="download__wrap download__wrap_author">
+                      <div class="download__photos"><img class="download__photo" src="../images/download_image.jpg"></div>
+                      <div class="download__author download__author_other">
+                        <div class="download__image"><img class="download__img" src="../images/article_author.png"></div>
+                        <div class="download__body">
+                          <div class="download__name">Jenny Doe</div>
+                          <div class="download__post">Author</div>
+                        </div>
+                      </div>
+                      <div class="form__checkboxes">
+                        <input class="form__checkbox" type="checkbox" name="check_4" id="check_4">
+                        <label for="check_4"></label>
+                      </div>
+                    </div>
+                    <h3 class="download__title download__title_other">Lorem Ipsum is simply</h3>
+                    <div class="download__wrap download__wrap_photo"><a class="download__btn download__btn_other" href="#">Download</a></div>
+                    <div class="share share_download share_other"><a class="share__link share__link_download share__link_1" href="#"></a><a class="share__link share__link_download share__link_2" href="#"></a><a class="share__link share__link_download share__link_5" href="#"></a></div>
+                  </div>
+                </div>
+                <div class="download__col col-xl-2 col-md-4">
+                  <div class="download__item download__item_photo">
+                    <div class="download__wrap download__wrap_author">
+                      <div class="download__photos"><img class="download__photo" src="../images/download_image.jpg"></div>
+                      <div class="download__author download__author_other">
+                        <div class="download__image"><img class="download__img" src="../images/article_author.png"></div>
+                        <div class="download__body">
+                          <div class="download__name">Jenny Doe</div>
+                          <div class="download__post">Author</div>
+                        </div>
+                      </div>
+                      <div class="form__checkboxes">
+                        <input class="form__checkbox" type="checkbox" name="check_5" id="check_5">
+                        <label for="check_5"></label>
+                      </div>
+                    </div>
+                    <h3 class="download__title download__title_other">Lorem Ipsum is simply</h3>
+                    <div class="download__wrap download__wrap_photo"><a class="download__btn download__btn_other" href="#">Download</a></div>
+                    <div class="share share_download share_other"><a class="share__link share__link_download share__link_1" href="#"></a><a class="share__link share__link_download share__link_2" href="#"></a><a class="share__link share__link_download share__link_5" href="#"></a></div>
+                  </div>
+                </div>
+                <div class="download__col col-xl-2 col-md-4">
+                  <div class="download__item download__item_photo">
+                    <div class="download__wrap download__wrap_author">
+                      <div class="download__photos"><img class="download__photo" src="../images/download_image.jpg"></div>
+                      <div class="download__author download__author_other">
+                        <div class="download__image"><img class="download__img" src="../images/article_author.png"></div>
+                        <div class="download__body">
+                          <div class="download__name">Jenny Doe</div>
+                          <div class="download__post">Author</div>
+                        </div>
+                      </div>
+                      <div class="form__checkboxes">
+                        <input class="form__checkbox" type="checkbox" name="check_6" id="check_6">
+                        <label for="check_6"></label>
+                      </div>
+                    </div>
+                    <h3 class="download__title download__title_other">Lorem Ipsum is simply</h3>
+                    <div class="download__wrap download__wrap_photo"><a class="download__btn download__btn_other" href="#">Download</a></div>
+                    <div class="share share_download share_other"><a class="share__link share__link_download share__link_1" href="#"></a><a class="share__link share__link_download share__link_2" href="#"></a><a class="share__link share__link_download share__link_5" href="#"></a></div>
+                  </div>
+                </div>
+                <div class="download__col col-xl-2 col-md-4">
+                  <div class="download__item download__item_photo">
+                    <div class="download__wrap download__wrap_author">
+                      <div class="download__photos"><img class="download__photo" src="../images/download_image.jpg"></div>
+                      <div class="download__author download__author_other">
+                        <div class="download__image"><img class="download__img" src="../images/article_author.png"></div>
+                        <div class="download__body">
+                          <div class="download__name">Jenny Doe</div>
+                          <div class="download__post">Author</div>
+                        </div>
+                      </div>
+                      <div class="form__checkboxes">
+                        <input class="form__checkbox" type="checkbox" name="check_7" id="check_7">
+                        <label for="check_7"></label>
+                      </div>
+                    </div>
+                    <h3 class="download__title download__title_other">Lorem Ipsum is simply</h3>
+                    <div class="download__wrap download__wrap_photo"><a class="download__btn download__btn_other" href="#">Download</a></div>
+                    <div class="share share_download share_other"><a class="share__link share__link_download share__link_1" href="#"></a><a class="share__link share__link_download share__link_2" href="#"></a><a class="share__link share__link_download share__link_5" href="#"></a></div>
+                  </div>
+                </div>
+                <div class="download__col col-xl-2 col-md-4">
+                  <div class="download__item download__item_photo">
+                    <div class="download__wrap download__wrap_author">
+                      <div class="download__photos"><img class="download__photo" src="../images/download_image.jpg"></div>
+                      <div class="download__author download__author_other">
+                        <div class="download__image"><img class="download__img" src="../images/article_author.png"></div>
+                        <div class="download__body">
+                          <div class="download__name">Jenny Doe</div>
+                          <div class="download__post">Author</div>
+                        </div>
+                      </div>
+                      <div class="form__checkboxes">
+                        <input class="form__checkbox" type="checkbox" name="check_8" id="check_8">
+                        <label for="check_8"></label>
+                      </div>
+                    </div>
+                    <h3 class="download__title download__title_other">Lorem Ipsum is simply</h3>
+                    <div class="download__wrap download__wrap_photo"><a class="download__btn download__btn_other" href="#">Download</a></div>
+                    <div class="share share_download share_other"><a class="share__link share__link_download share__link_1" href="#"></a><a class="share__link share__link_download share__link_2" href="#"></a><a class="share__link share__link_download share__link_5" href="#"></a></div>
+                  </div>
+                </div>
+                <div class="download__col col-xl-2 col-md-4">
+                  <div class="download__item download__item_photo">
+                    <div class="download__wrap download__wrap_author">
+                      <div class="download__photos"><img class="download__photo" src="../images/download_image.jpg"></div>
+                      <div class="download__author download__author_other">
+                        <div class="download__image"><img class="download__img" src="../images/article_author.png"></div>
+                        <div class="download__body">
+                          <div class="download__name">Jenny Doe</div>
+                          <div class="download__post">Author</div>
+                        </div>
+                      </div>
+                      <div class="form__checkboxes">
+                        <input class="form__checkbox" type="checkbox" name="check_9" id="check_9">
+                        <label for="check_9"></label>
+                      </div>
+                    </div>
+                    <h3 class="download__title download__title_other">Lorem Ipsum is simply</h3>
+                    <div class="download__wrap download__wrap_photo"><a class="download__btn download__btn_other" href="#">Download</a></div>
+                    <div class="share share_download share_other"><a class="share__link share__link_download share__link_1" href="#"></a><a class="share__link share__link_download share__link_2" href="#"></a><a class="share__link share__link_download share__link_5" href="#"></a></div>
+                  </div>
+                </div>
+                <div class="download__col col-xl-2 col-md-4">
+                  <div class="download__item download__item_photo">
+                    <div class="download__wrap download__wrap_author">
+                      <div class="download__photos"><img class="download__photo" src="../images/download_image.jpg"></div>
+                      <div class="download__author download__author_other">
+                        <div class="download__image"><img class="download__img" src="../images/article_author.png"></div>
+                        <div class="download__body">
+                          <div class="download__name">Jenny Doe</div>
+                          <div class="download__post">Author</div>
+                        </div>
+                      </div>
+                      <div class="form__checkboxes">
+                        <input class="form__checkbox" type="checkbox" name="check_10" id="check_10">
+                        <label for="check_10"></label>
+                      </div>
+                    </div>
+                    <h3 class="download__title download__title_other">Lorem Ipsum is simply</h3>
+                    <div class="download__wrap download__wrap_photo"><a class="download__btn download__btn_other" href="#">Download</a></div>
+                    <div class="share share_download share_other"><a class="share__link share__link_download share__link_1" href="#"></a><a class="share__link share__link_download share__link_2" href="#"></a><a class="share__link share__link_download share__link_5" href="#"></a></div>
+                  </div>
+                </div>
+                <div class="download__col col-xl-2 col-md-4">
+                  <div class="download__item download__item_photo">
+                    <div class="download__wrap download__wrap_author">
+                      <div class="download__photos"><img class="download__photo" src="../images/download_image.jpg"></div>
+                      <div class="download__author download__author_other">
+                        <div class="download__image"><img class="download__img" src="../images/article_author.png"></div>
+                        <div class="download__body">
+                          <div class="download__name">Jenny Doe</div>
+                          <div class="download__post">Author</div>
+                        </div>
+                      </div>
+                      <div class="form__checkboxes">
+                        <input class="form__checkbox" type="checkbox" name="check_11" id="check_11">
+                        <label for="check_11"></label>
+                      </div>
+                    </div>
+                    <h3 class="download__title download__title_other">Lorem Ipsum is simply</h3>
+                    <div class="download__wrap download__wrap_photo"><a class="download__btn download__btn_other" href="#">Download</a></div>
+                    <div class="share share_download share_other"><a class="share__link share__link_download share__link_1" href="#"></a><a class="share__link share__link_download share__link_2" href="#"></a><a class="share__link share__link_download share__link_5" href="#"></a></div>
+                  </div>
+                </div>
+                <div class="download__col col-xl-2 col-md-4">
+                  <div class="download__item download__item_photo">
+                    <div class="download__wrap download__wrap_author">
+                      <div class="download__photos"><img class="download__photo" src="../images/download_image.jpg"></div>
+                      <div class="download__author download__author_other">
+                        <div class="download__image"><img class="download__img" src="../images/article_author.png"></div>
+                        <div class="download__body">
+                          <div class="download__name">Jenny Doe</div>
+                          <div class="download__post">Author</div>
+                        </div>
+                      </div>
+                      <div class="form__checkboxes">
+                        <input class="form__checkbox" type="checkbox" name="check_12" id="check_12">
+                        <label for="check_12"></label>
+                      </div>
+                    </div>
+                    <h3 class="download__title download__title_other">Lorem Ipsum is simply</h3>
+                    <div class="download__wrap download__wrap_photo"><a class="download__btn download__btn_other" href="#">Download</a></div>
+                    <div class="share share_download share_other"><a class="share__link share__link_download share__link_1" href="#"></a><a class="share__link share__link_download share__link_2" href="#"></a><a class="share__link share__link_download share__link_5" href="#"></a></div>
+                  </div>
+                </div>
+                <div class="download__col col-xl-2 col-md-4">
+                  <div class="download__item download__item_photo">
+                    <div class="download__wrap download__wrap_author">
+                      <div class="download__photos"><img class="download__photo" src="../images/download_image.jpg"></div>
+                      <div class="download__author download__author_other">
+                        <div class="download__image"><img class="download__img" src="../images/article_author.png"></div>
+                        <div class="download__body">
+                          <div class="download__name">Jenny Doe</div>
+                          <div class="download__post">Author</div>
+                        </div>
+                      </div>
+                      <div class="form__checkboxes">
+                        <input class="form__checkbox" type="checkbox" name="check_13" id="check_13">
+                        <label for="check_13"></label>
+                      </div>
+                    </div>
+                    <h3 class="download__title download__title_other">Lorem Ipsum is simply</h3>
+                    <div class="download__wrap download__wrap_photo"><a class="download__btn download__btn_other" href="#">Download</a></div>
+                    <div class="share share_download share_other"><a class="share__link share__link_download share__link_1" href="#"></a><a class="share__link share__link_download share__link_2" href="#"></a><a class="share__link share__link_download share__link_5" href="#"></a></div>
+                  </div>
+                </div>
+                <div class="download__col col-xl-2 col-md-4">
+                  <div class="download__item download__item_photo">
+                    <div class="download__wrap download__wrap_author">
+                      <div class="download__photos"><img class="download__photo" src="../images/download_image.jpg"></div>
+                      <div class="download__author download__author_other">
+                        <div class="download__image"><img class="download__img" src="../images/article_author.png"></div>
+                        <div class="download__body">
+                          <div class="download__name">Jenny Doe</div>
+                          <div class="download__post">Author</div>
+                        </div>
+                      </div>
+                      <div class="form__checkboxes">
+                        <input class="form__checkbox" type="checkbox" name="check_14" id="check_14">
+                        <label for="check_14"></label>
+                      </div>
+                    </div>
+                    <h3 class="download__title download__title_other">Lorem Ipsum is simply</h3>
+                    <div class="download__wrap download__wrap_photo"><a class="download__btn download__btn_other" href="#">Download</a></div>
+                    <div class="share share_download share_other"><a class="share__link share__link_download share__link_1" href="#"></a><a class="share__link share__link_download share__link_2" href="#"></a><a class="share__link share__link_download share__link_5" href="#"></a></div>
+                  </div>
+                </div>
+                <div class="download__col col-xl-2 col-md-4">
+                  <div class="download__item download__item_photo">
+                    <div class="download__wrap download__wrap_author">
+                      <div class="download__photos"><img class="download__photo" src="../images/download_image.jpg"></div>
+                      <div class="download__author download__author_other">
+                        <div class="download__image"><img class="download__img" src="../images/article_author.png"></div>
+                        <div class="download__body">
+                          <div class="download__name">Jenny Doe</div>
+                          <div class="download__post">Author</div>
+                        </div>
+                      </div>
+                      <div class="form__checkboxes">
+                        <input class="form__checkbox" type="checkbox" name="check_15" id="check_15">
+                        <label for="check_15"></label>
+                      </div>
+                    </div>
+                    <h3 class="download__title download__title_other">Lorem Ipsum is simply</h3>
+                    <div class="download__wrap download__wrap_photo"><a class="download__btn download__btn_other" href="#">Download</a></div>
+                    <div class="share share_download share_other"><a class="share__link share__link_download share__link_1" href="#"></a><a class="share__link share__link_download share__link_2" href="#"></a><a class="share__link share__link_download share__link_5" href="#"></a></div>
+                  </div>
+                </div>
+                <div class="download__col col-xl-2 col-md-4">
+                  <div class="download__item download__item_photo">
+                    <div class="download__wrap download__wrap_author">
+                      <div class="download__photos"><img class="download__photo" src="../images/download_image.jpg"></div>
+                      <div class="download__author download__author_other">
+                        <div class="download__image"><img class="download__img" src="../images/article_author.png"></div>
+                        <div class="download__body">
+                          <div class="download__name">Jenny Doe</div>
+                          <div class="download__post">Author</div>
+                        </div>
+                      </div>
+                      <div class="form__checkboxes">
+                        <input class="form__checkbox" type="checkbox" name="check_16" id="check_16">
+                        <label for="check_16"></label>
+                      </div>
+                    </div>
+                    <h3 class="download__title download__title_other">Lorem Ipsum is simply</h3>
+                    <div class="download__wrap download__wrap_photo"><a class="download__btn download__btn_other" href="#">Download</a></div>
+                    <div class="share share_download share_other"><a class="share__link share__link_download share__link_1" href="#"></a><a class="share__link share__link_download share__link_2" href="#"></a><a class="share__link share__link_download share__link_5" href="#"></a></div>
+                  </div>
+                </div>
+                <div class="download__col col-xl-2 col-md-4">
+                  <div class="download__item download__item_photo">
+                    <div class="download__wrap download__wrap_author">
+                      <div class="download__photos"><img class="download__photo" src="../images/download_image.jpg"></div>
+                      <div class="download__author download__author_other">
+                        <div class="download__image"><img class="download__img" src="../images/article_author.png"></div>
+                        <div class="download__body">
+                          <div class="download__name">Jenny Doe</div>
+                          <div class="download__post">Author</div>
+                        </div>
+                      </div>
+                      <div class="form__checkboxes">
+                        <input class="form__checkbox" type="checkbox" name="check_17" id="check_17">
+                        <label for="check_17"></label>
+                      </div>
+                    </div>
+                    <h3 class="download__title download__title_other">Lorem Ipsum is simply</h3>
+                    <div class="download__wrap download__wrap_photo"><a class="download__btn download__btn_other" href="#">Download</a></div>
+                    <div class="share share_download share_other"><a class="share__link share__link_download share__link_1" href="#"></a><a class="share__link share__link_download share__link_2" href="#"></a><a class="share__link share__link_download share__link_5" href="#"></a></div>
+                  </div>
+                </div>
+                <div class="download__col col-xl-2 col-md-4">
+                  <div class="download__item download__item_photo">
+                    <div class="download__wrap download__wrap_author">
+                      <div class="download__photos"><img class="download__photo" src="../images/download_image.jpg"></div>
+                      <div class="download__author download__author_other">
+                        <div class="download__image"><img class="download__img" src="../images/article_author.png"></div>
+                        <div class="download__body">
+                          <div class="download__name">Jenny Doe</div>
+                          <div class="download__post">Author</div>
+                        </div>
+                      </div>
+                      <div class="form__checkboxes">
+                        <input class="form__checkbox" type="checkbox" name="check_18" id="check_18">
+                        <label for="check_18"></label>
+                      </div>
+                    </div>
+                    <h3 class="download__title download__title_other">Lorem Ipsum is simply</h3>
+                    <div class="download__wrap download__wrap_photo"><a class="download__btn download__btn_other" href="#">Download</a></div>
+                    <div class="share share_download share_other"><a class="share__link share__link_download share__link_1" href="#"></a><a class="share__link share__link_download share__link_2" href="#"></a><a class="share__link share__link_download share__link_5" href="#"></a></div>
+                  </div>
+                </div>
+                <div class="download__col col-xl-2 col-md-4">
+                  <div class="download__item download__item_photo">
+                    <div class="download__wrap download__wrap_author">
+                      <div class="download__photos"><img class="download__photo" src="../images/download_image.jpg"></div>
+                      <div class="download__author download__author_other">
+                        <div class="download__image"><img class="download__img" src="../images/article_author.png"></div>
+                        <div class="download__body">
+                          <div class="download__name">Jenny Doe</div>
+                          <div class="download__post">Author</div>
+                        </div>
+                      </div>
+                      <div class="form__checkboxes">
+                        <input class="form__checkbox" type="checkbox" name="check_19" id="check_19">
+                        <label for="check_19"></label>
+                      </div>
+                    </div>
+                    <h3 class="download__title download__title_other">Lorem Ipsum is simply</h3>
+                    <div class="download__wrap download__wrap_photo"><a class="download__btn download__btn_other" href="#">Download</a></div>
+                    <div class="share share_download share_other"><a class="share__link share__link_download share__link_1" href="#"></a><a class="share__link share__link_download share__link_2" href="#"></a><a class="share__link share__link_download share__link_5" href="#"></a></div>
+                  </div>
+                </div>
+                <div class="download__col col-xl-2 col-md-4">
+                  <div class="download__item download__item_photo">
+                    <div class="download__wrap download__wrap_author">
+                      <div class="download__photos"><img class="download__photo" src="../images/download_image.jpg"></div>
+                      <div class="download__author download__author_other">
+                        <div class="download__image"><img class="download__img" src="../images/article_author.png"></div>
+                        <div class="download__body">
+                          <div class="download__name">Jenny Doe</div>
+                          <div class="download__post">Author</div>
+                        </div>
+                      </div>
+                      <div class="form__checkboxes">
+                        <input class="form__checkbox" type="checkbox" name="check_20" id="check_20">
+                        <label for="check_20"></label>
+                      </div>
+                    </div>
+                    <h3 class="download__title download__title_other">Lorem Ipsum is simply</h3>
+                    <div class="download__wrap download__wrap_photo"><a class="download__btn download__btn_other" href="#">Download</a></div>
+                    <div class="share share_download share_other"><a class="share__link share__link_download share__link_1" href="#"></a><a class="share__link share__link_download share__link_2" href="#"></a><a class="share__link share__link_download share__link_5" href="#"></a></div>
+                  </div>
+                </div>
+                <div class="download__col col-xl-2 col-md-4">
+                  <div class="download__item download__item_photo">
+                    <div class="download__wrap download__wrap_author">
+                      <div class="download__photos"><img class="download__photo" src="../images/download_image.jpg"></div>
+                      <div class="download__author download__author_other">
+                        <div class="download__image"><img class="download__img" src="../images/article_author.png"></div>
+                        <div class="download__body">
+                          <div class="download__name">Jenny Doe</div>
+                          <div class="download__post">Author</div>
+                        </div>
+                      </div>
+                      <div class="form__checkboxes">
+                        <input class="form__checkbox" type="checkbox" name="check_21" id="check_21">
+                        <label for="check_21"></label>
+                      </div>
+                    </div>
+                    <h3 class="download__title download__title_other">Lorem Ipsum is simply</h3>
+                    <div class="download__wrap download__wrap_photo"><a class="download__btn download__btn_other" href="#">Download</a></div>
+                    <div class="share share_download share_other"><a class="share__link share__link_download share__link_1" href="#"></a><a class="share__link share__link_download share__link_2" href="#"></a><a class="share__link share__link_download share__link_5" href="#"></a></div>
+                  </div>
+                </div>
+                <div class="download__col col-xl-2 col-md-4">
+                  <div class="download__item download__item_photo">
+                    <div class="download__wrap download__wrap_author">
+                      <div class="download__photos"><img class="download__photo" src="../images/download_image.jpg"></div>
+                      <div class="download__author download__author_other">
+                        <div class="download__image"><img class="download__img" src="../images/article_author.png"></div>
+                        <div class="download__body">
+                          <div class="download__name">Jenny Doe</div>
+                          <div class="download__post">Author</div>
+                        </div>
+                      </div>
+                      <div class="form__checkboxes">
+                        <input class="form__checkbox" type="checkbox" name="check_22" id="check_22">
+                        <label for="check_22"></label>
+                      </div>
+                    </div>
+                    <h3 class="download__title download__title_other">Lorem Ipsum is simply</h3>
+                    <div class="download__wrap download__wrap_photo"><a class="download__btn download__btn_other" href="#">Download</a></div>
+                    <div class="share share_download share_other"><a class="share__link share__link_download share__link_1" href="#"></a><a class="share__link share__link_download share__link_2" href="#"></a><a class="share__link share__link_download share__link_5" href="#"></a></div>
+                  </div>
+                </div>
+                <div class="download__col col-xl-2 col-md-4">
+                  <div class="download__item download__item_photo">
+                    <div class="download__wrap download__wrap_author">
+                      <div class="download__photos"><img class="download__photo" src="../images/download_image.jpg"></div>
+                      <div class="download__author download__author_other">
+                        <div class="download__image"><img class="download__img" src="../images/article_author.png"></div>
+                        <div class="download__body">
+                          <div class="download__name">Jenny Doe</div>
+                          <div class="download__post">Author</div>
+                        </div>
+                      </div>
+                      <div class="form__checkboxes">
+                        <input class="form__checkbox" type="checkbox" name="check_23" id="check_23">
+                        <label for="check_23"></label>
+                      </div>
+                    </div>
+                    <h3 class="download__title download__title_other">Lorem Ipsum is simply</h3>
+                    <div class="download__wrap download__wrap_photo"><a class="download__btn download__btn_other" href="#">Download</a></div>
+                    <div class="share share_download share_other"><a class="share__link share__link_download share__link_1" href="#"></a><a class="share__link share__link_download share__link_2" href="#"></a><a class="share__link share__link_download share__link_5" href="#"></a></div>
+                  </div>
+                </div>
+                <div class="download__col col-xl-2 col-md-4">
+                  <div class="download__item download__item_photo">
+                    <div class="download__wrap download__wrap_author">
+                      <div class="download__photos"><img class="download__photo" src="../images/download_image.jpg"></div>
+                      <div class="download__author download__author_other">
+                        <div class="download__image"><img class="download__img" src="../images/article_author.png"></div>
+                        <div class="download__body">
+                          <div class="download__name">Jenny Doe</div>
+                          <div class="download__post">Author</div>
+                        </div>
+                      </div>
+                      <div class="form__checkboxes">
+                        <input class="form__checkbox" type="checkbox" name="check_24" id="check_24">
+                        <label for="check_24"></label>
+                      </div>
+                    </div>
+                    <h3 class="download__title download__title_other">Lorem Ipsum is simply</h3>
+                    <div class="download__wrap download__wrap_photo"><a class="download__btn download__btn_other" href="#">Download</a></div>
+                    <div class="share share_download share_other"><a class="share__link share__link_download share__link_1" href="#"></a><a class="share__link share__link_download share__link_2" href="#"></a><a class="share__link share__link_download share__link_5" href="#"></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="single-nav single-nav_other">
+                <div class="single-nav__arrows"><a class="single-nav__arrow single-nav__arrow_disabled single-nav__arrow_prev" href="#">Prev</a><a class="single-nav__arrow single-nav__arrow_next" href="#">Next</a></div>
+                <ul class="single-nav__dots">
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item">
+                    <dsfdsf></dsfdsf><a class="single-nav__link single-nav__link_active" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                  <li class="single-nav__item"><a class="single-nav__link" href="#">Link</a>
+                  </li>
+                </ul>
+                <div class="single-nav__actions">
+                  <div class="single-nav__select">Select All</div><a class="single-nav__download">Download</a>
+                </div>
+              </div>
+            </div>
+            <!-- include includes/pager.pug-->
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer__content"><a class="footer__logo" href="/"><img class="footer__image" src="../images/logo_footer.svg" alt=""></a>
+          <nav class="navigation navigation_footer">
+            <div class="navigation__content navigation__content_footer"><a class="navigation__link navigation__link_footer" href="#">Home</a><a class="navigation__link navigation__link_footer" href="#">Tests</a><a class="navigation__link navigation__link_footer" href="#">Student records</a><a class="navigation__link navigation__link_footer" href="#">Forums</a><a class="navigation__link navigation__link_footer" href="#">Articles</a><a class="navigation__link navigation__link_footer" href="#">Q&amp;A Library</a><a class="navigation__link navigation__link_footer" href="#">Certificates</a><a class="navigation__link navigation__link_footer" href="#">Help</a>
+            </div>
+          </nav>
+          <div class="statistics">
+            <div class="statistics__item"><b>Number of students</b>1500
+            </div>
+            <div class="statistics__item"><b>Number of teachers</b>50
+            </div>
+            <div class="statistics__item"><b>Number of courses</b>300
+            </div>
+            <div class="statistics__item"><b>Total number of trainees in all courses</b>600
+            </div>
+            <div class="statistics__item"><b>Total number of students currently</b>500
+            </div>
+          </div>
+          <div class="socials socials_footer"><a class="socials__link socials__link_footer socials__link_1" href="#" target="_blank"></a><a class="socials__link socials__link_footer socials__link_2" href="#" target="_blank"></a><a class="socials__link socials__link_footer socials__link_3" href="#" target="_blank"></a><a class="socials__link socials__link_footer socials__link_4" href="#" target="_blank"></a><a class="socials__link socials__link_footer socials__link_5" href="#" target="_blank"></a>
+          </div>
+          <p class="footer__copyright">
+            © Copyright 2018. All Rights Reserved111 Your Street, Your City, Your State 11111, 
+            Your Country davinci.alidropship.com
+            
+          </p>
+        </div>
+        <div class="arrow-up"></div>
+        <div class="all_pages">
+          <div class="page_point"></div>
+          <ul class="page_list">
+            <li><a href="home.html">home</a></li>
+            <li><a href="course.html">course</a></li>
+            <li><a href="login.html">login</a></li>
+            <li><a href="register.html">register</a></li>
+            <li><a href="articles.html">articles</a></li>
+            <li><a href="article.html">article</a></li>
+            <li><a href="study_plans.html">study plans</a></li>
+            <li><a href="qa_library.html">QA library</a></li>
+            <li><a href="certificates.html">certificates</a></li>
+            <li><a href="download_video.html">download video</a></li>
+            <li><a href="download_books.html">download books</a></li>
+            <li><a href="download_audio.html">download audio</a></li>
+            <li><a href="download_doc.html">download document</a></li>
+            <li><a href="download_other.html">download other</a></li>
+            <li><a href="download_image.html">download image</a></li>
+            <li><a href="course_page.html">course page</a></li>
+            <li><a href="test_1.html">test 1</a></li>
+            <li><a href="test_2.html">test 2</a></li>
+            <li><a href="test_3.html">test 3</a></li>
+            <li><a href="test_4.html">test 4</a></li>
+            <li><a href="search.html">search</a></li>
+          </ul>
+        </div>
+      </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://unpkg.com/vue"></script>
+      <script src="../js/slick.min.js"></script>
+      <script src="../js/selectize.min.js"></script>
+      <script src="../js/datepicker.js"></script>
+      <script src="../js/current-device.min.js"></script>
+      <script src="../js/jquery.livequery.min.js"></script>
+      <script src="../js/plyr.js"></script>
+      <script>
+        function readURL(input) {
+        	if (input.files && input.files[0]) {
+        		var reader = new FileReader();
+        		reader.onload = function (e) {
+        			$('.form__images').append('<div class="img_wrap"><img src="'+e.target.result+'" alt="" class="upload-image"></div>')
+        		};
+        		reader.readAsDataURL(input.files[0]);
+        	}
+        }
+      </script>
+      <script src="../js/main.js"></script>
+      <script src="../js/app.js"></script>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+footer.footer
+	.footer__content
+		a.footer__logo(
+			href="/"
+		)
+			img.footer__image(
+				src="../images/logo_footer.svg",
+				alt=""
+			)
+		nav.navigation.navigation_footer
+			.navigation__content.navigation__content_footer
+				- var names = ['Home','Tests', 'Student records', 'Forums', 'Articles', 'Q&A Library', 'Certificates', 'Help'];
+					each name in names
+						a(
+							class="navigation__link navigation__link_footer"
+							href="#"
+						)=name
+		.statistics
+			- var titles = ['Number of students','Number of teachers','Number of courses','Total number of trainees in all courses','Total number of students currently'];	
+			- var numbers = ['1500','50','300','600','500'];	
+				each title, key in titles
+					.statistics__item
+						b=title
+						=numbers[key]
+		.socials.socials_footer
+			- var x = 5;
+			- for (var i=1; i<=x; i++) {
+				a(
+					class="socials__link socials__link_footer socials__link_" + i
+					href="#"
+					target="_blank"
+				)
+			- }
+		p.footer__copyright
+			| © Copyright 2018. All Rights Reserved111 Your Street, Your City, Your State 11111, 
+			| Your Country davinci.alidropship.com
+			|
+	.arrow-up
+	.all_pages
+		.page_point
+		ul.page_list
+			li
+				a(href="home.html") home
+			li
+				a(href="course.html") course
+			li
+				a(href="login.html") login
+			li
+				a(href="register.html") register
+			li
+				a(href="articles.html") articles
+			li
+				a(href="article.html") article
+			li
+				a(href="study_plans.html") study plans
+			li
+				a(href="qa_library.html") QA library
+			li
+				a(href="certificates.html") certificates
+			li
+				a(href="download_video.html") download video
+			li
+				a(href="download_books.html") download books
+			li
+				a(href="download_audio.html") download audio
+			li
+				a(href="download_doc.html") download document
+			li
+				a(href="download_other.html") download other
+			li
+				a(href="download_image.html") download image
+			li
+				a(href="course_page.html") course page
+			li
+				a(href="test_1.html") test 1
+			li
+				a(href="test_2.html") test 2
+			li
+				a(href="test_3.html") test 3
+			li
+				a(href="test_4.html") test 4
+			li
+				a(href="search.html") search
+script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+script(src='https://unpkg.com/vue')
+script(src="../js/slick.min.js")
+script(src="../js/selectize.min.js")
+script(src="../js/datepicker.js")
+script(src="../js/current-device.min.js")
+script(src="../js/jquery.livequery.min.js")
+script(src="../js/plyr.js")
+script.
+	function readURL(input) {
+		if (input.files && input.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function (e) {
+				$('.form__images').append('<div class="img_wrap"><img src="'+e.target.result+'" alt="" class="upload-image"></div>')
+			};
+			reader.readAsDataURL(input.files[0]);
+		}
+	}
+script(src="../js/main.js")
+script(src="../js/app.js")

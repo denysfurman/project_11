@@ -1,0 +1,18 @@
+.courses_global{
+	.course-info{
+		font-size: 14px;
+		&__row{
+			display: flex;
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+		&__col{
+			flex: 0 0 40%;
+			max-width: 40%;
+			&:first-child{
+				flex: 0 0 60%;
+				max-width: 60%;
+			}
+		}
+	}
+}

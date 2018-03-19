@@ -1,0 +1,50 @@
+extend includes/base/head
+block head
+	main.wrapper.wrapper_not-front
+		.wrapper__content
+			include includes/base/header.pug
+			.wrapper__middle
+				include includes/base/navigation.pug
+				.container-fluid
+					.breadcrumbs
+						a.breadcrumbs__link.breadcrumbs__link_home(href="home.html") Home
+						span.breadcrumbs__sep /
+						span.breadcrumbs__this Exams
+					.test
+						form.test-form
+							.form__item.form-group.form__item_test
+								label.form__label Course
+								select(name="nationality")
+									option(value="1") 1
+									option(value="2") 2
+							.form__item.form-group.form__item_test
+								label.form__label Section
+								select(name="nationality")
+									option(value="1") 1
+									option(value="2") 2
+							.form__item.form__item_test.form__item_dates
+								label.form__label Date
+								.form__value 07.03.2018
+							.form__item.form__item_test.form__item_time
+								label.form__label Time
+								.form__value 12:00 am
+							.form__item.form__item_test.form__item_duration
+								label.form__label Exam duration
+								.form__value.form__value_duration 03:33
+									span .50
+							.form__item.form__item_test.form__item_total
+								label.form__label Total questions
+								.form__value 999999
+							.form__item.form__item_test.form__item_answer
+								label.form__label Questions answered
+								.form__value 999999
+						.test__content
+							.test__row
+								.test__title It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as oppos ed to using 'Content here, content here', making it look like readable English.
+								.test__buttons
+									.test__button true
+									.test__button.test__button_disabled false
+						.test__footer 
+							a.test__back(href="#") backward
+							a.test__next(href="#") next
+		include includes/base/footer.pug

@@ -1,0 +1,140 @@
+.single-nav{
+	background: #fff;
+	border-radius: 38px 0;
+	border: 1px solid #e9e9e9;
+	padding: 20px 28px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+	@include media(phone){
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	&_other{
+		padding-top: 0;
+		padding-bottom: 0;
+		@include media(tab){
+			.single-nav__dots{
+				display: none;
+			}
+		}
+	}
+	&__arrows{
+		flex: 0 0 85px;
+		max-width: 85px;
+		height: 32px;
+		background: $color_brand;
+		box-shadow: 5px 3px 8px rgba(0, 0, 0, 0.15);
+		border-radius: 16px;
+		position: relative;
+	}
+	&__arrow{
+		color: #fff;
+		width: 18px;
+		position: absolute;
+		height: 100%;
+		display: block;
+		text-indent: -9999px;
+		&::after{
+			@include font;
+			font-size: 18px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			text-indent: 0;
+			transition: .4s;
+		}
+		&_disabled{
+			opacity: .22;
+			&:hover{
+				color: #fff;
+			}
+		}
+		&_prev{
+			left: 9px;
+			&::after{
+				transform: translateY(-50%) rotate(180deg);
+				content: '\e906';
+			}
+		}
+		&_next{
+			right: 9px;
+			&::after{
+				content: '\e906';
+			}
+		}
+	}
+	&__dots{
+		margin-bottom: 0;
+		padding-left: 23px;
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		@include media(phone){
+			display: none;
+		}
+	}
+	&__item{
+		list-style: none;
+	}
+	&__link{
+		display: block;
+		text-indent: -9999px;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background: #dedede;
+		opacity: .5;
+		transition: .4s;
+		&:hover{
+			background: $color_brand;
+		}
+		&_active{
+			background: #060606;
+		}
+	}
+	&__actions{
+		flex: 0 0 400px;
+		max-width: 400px;
+		padding: 0 20px 0 40px;
+		display: flex;
+		position: relative;
+		height: 72px;
+		justify-content: space-between;
+		align-items: center;
+		@include media(phone){
+			flex: 0 0 100%;
+			max-width: 100%;
+			padding: 0;
+		}
+		&::before{
+			content: '';
+			display: block;
+			height: 72px;
+			width: 1px;
+			background: #e9e9e9;
+			position: absolute;
+			left: 20px;
+			top: 0px;
+			@include media(phone){
+				display: none;
+			}
+		}
+	}
+	&__select{
+		@include btn($color_submit);
+		min-width: 140px;
+		cursor: pointer;
+	}
+	&__download{
+		@include btn($color_brand);
+		cursor: pointer;
+		@include media(phone){
+			min-width: 150px;
+		}
+		&:hover{
+			background: $color_submit;
+		}
+	}
+}

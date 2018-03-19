@@ -1,0 +1,55 @@
+.share{
+	padding: 10px 30px;
+	display: flex;
+	@include media(phone){
+		justify-content: center;
+		padding: 20px 30px;
+	}
+	&__link{
+	    flex: 0 0 32px;
+	    height: 32px;
+	    position: relative;
+	    margin-right: 14px;
+	     @include media(phone){
+	        flex: 0 0 28px;
+	        height: 24px;
+	        margin-left: 10px;
+	     }
+	    &::before{
+	        content: '\e900';
+	        @include font;
+	        font-size: 32px;
+	        position: absolute;
+	        top: 0;
+	        left: 0;
+	        color: #cacbcb;
+	        transition: .4s;
+	         @include media(phone){
+	            font-size: 28px;
+	         }
+	    }
+	    &:hover{
+	        &::before{
+	            color: $color_submit;
+	        }
+	    }
+	    &_1{
+	        &::before{
+	            content: '\e900'; 
+	            color: #455fa1;
+	        }
+	    }
+	    &_2{
+	        &::before{
+	            content: '\e901'; 
+	            color: #58abf5;
+	        }
+	    }
+	    &_5{
+	        &::before{
+	            content: '\e904'; 
+	            color: #f8991d;
+	        }
+	    }
+	}
+}

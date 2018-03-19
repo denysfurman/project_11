@@ -1,0 +1,54 @@
+header.header
+	.header__actions
+		.header__content.container-fluid
+			.menu-btn
+				.menu-btn__item
+				.menu-btn__item
+				.menu-btn__item
+			.search__btn
+			form.search
+				input.form__text.form__text_mod.form-control(
+					placeholder="Search"
+				)
+				input.search__submit(
+					type="submit"
+					value="Search"
+				)
+			.socials
+				- var x = 5;
+				- for (var i=1; i<=x; i++){
+					a(
+						class="socials__link socials__link_" + i
+						href="#"
+						target="_blank"
+					)
+				- }
+	.header__content.container-fluid
+		.header__info
+			a.header__phone(
+				href="tel:+966505941199"
+			) +966 505941199
+			ul.language
+				li.language__item.language__item_first.language__item_ar
+					a.language__link(
+						href="#"
+					) العربية
+				li.language__item.language__item_last
+					a.language__link.language__link_active.language__link_en(
+						href="#"
+					) Eng
+		a.logo(
+			href="home.html"
+		)
+			img.logo__image(
+				src="../images/logo.svg"
+				alt=""
+			)
+			.logo__text www.imufasser.com
+		.sign
+			a.sign__link.sign__link_login(
+				href="#"
+			) Login
+			a.sign__link.sign__link_register(
+				href="#"
+			) Register

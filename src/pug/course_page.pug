@@ -1,0 +1,70 @@
+extend includes/base/head
+block head
+	main.wrapper.wrapper_not-front
+		.wrapper__content.wrapper__content_backing
+			include includes/base/header.pug
+			.wrapper__middle
+				include includes/base/navigation.pug
+				.container-fluid
+					.breadcrumbs
+						a.breadcrumbs__link.breadcrumbs__link_home(href="home.html") Home
+						span.breadcrumbs__sep /
+						span.breadcrumbs__this Course
+					.course.row
+						.col-xl-8
+							.course__header.row
+								.col-lg-6
+									.course__image
+										img.course__img(
+											src="../images/course.jpg",
+											alt=""
+										)
+								.col-lg-6
+									.course__body
+										h1.course__title
+											span.course__inner Name of the course
+										.course__description
+											p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated
+							.course-nav
+								.course-nav__content
+									a(
+										href="#"
+										v-for="tabItem,key in tabItems"
+										class="course-nav__link"
+										:class="{ 'course-nav__link_active': state == tabItem.text } "
+										@click.prevent="tabsNav(key)"
+									) {{ tabItem.text }}
+								form.search-inner(
+									v-if="state == 'Questions'"
+								)
+									.search-inner__item
+										input.search-inner__text.form-control(
+											type="text"
+											placeholder="Search question..."
+										)
+									button.search-inner__submit(type="submit") Search
+							.course__buttons(
+								v-if="state == 'Lessons'"
+							)
+								a.course__btn(href="#") Add lesson
+								a.course__btn(href="#") Edit lesson
+							include includes/course/lessons.pug
+							include includes/course/faq.pug
+							include includes/course/forum.pug
+						.col-xl-4
+							.course-information
+								.course-information__image
+									img.course-information__img(
+										src="../images/course.jpg"
+										alt=""
+									)
+								a.course-information__file(href="") It is a long established fact
+								.course-information__description
+									p It is a long established fact It is a long established fact
+									p It is a long established fact It is a long established fact
+								.share.share_course
+									a.share__link.share__link_download.share__link_1(href="#")
+									a.share__link.share__link_download.share__link_2(href="#")
+									a.share__link.share__link_download.share__link_5(href="#")
+							include includes/comments.pug
+		include includes/base/footer.pug

@@ -1,0 +1,33 @@
+form.filter
+    .filter__item
+        - var x = 5;
+        select
+            - for (var i=1; i<=x; i++) {
+                option(value="Grade 1" + i)='Grade 1' + i
+            - }
+    .filter__item
+        select
+            - for (var i=1; i<=x; i++) {
+                option(value="Subject " + i)='Subject ' + i
+            - }
+    .filter__item.filter__item_purpose
+        select
+            - for (var i=1; i<=x; i++) {
+                option(value="Purpose of training " + i)='Purpose of training ' + i
+            - }
+    .filter__item.filter__item_name
+        .filter__label Sort
+        select
+            option(class="sort" value="Course names")='Course names'
+            option(class="sort2" value="Course names2")='Course names'
+            option(class="sort_num" value="Number of registrants")='Number of registrants'
+            option(class="sort_num2" value="Number of registrants2")='Number of registrants'
+            option(class="sort_num" value="Number of passed")='Number of passed'
+            option(class="sort_num2" value="Number of passed2")='Number of passed'
+            option(class="sort" value="Teachers' names")="Teachers' names"
+            option(class="sort2" value="Teachers' names2")="Teachers' names"
+    .filter__actions
+        input.filter__submit(
+            type="submit"
+            value="Search"
+        )

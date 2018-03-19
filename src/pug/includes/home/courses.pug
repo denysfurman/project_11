@@ -1,0 +1,338 @@
+section.courses
+    .container-fluid
+        h3.courses__title
+            span SELF-STUDY PLAN IN SCHOOL
+        include home_filter.pug
+        - var names = ['Lessons', 'Registered', 'Currently studing', 'Passed'];
+        .courses__content.row
+            .courses__col.col-md-6.col-xl-3
+                .courses__item
+                    .courses__wrap  
+                        .courses__image
+                            img.courses__img(
+                                src="../images/courses_1.jpg", alt=""
+                            )
+                        .courses__body
+                            h3.courses__label Arbitration process
+                            p.courses__text It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+                    .teacher-block
+                        .teacher-block__wrap
+                            - var x = 3;
+                            - for (var i=1; i<=x; i++) {
+                                .teacher-block__photo
+                                    img(
+                                        src='../images/teacher_'+ i +'.png', alt=""
+                                    )
+                            - }
+                            .teacher-block__more
+                                .teacher-block__btn(
+                                    @click="showTeachers"
+                                ) More
+                                .teacher-dropdown(
+                                    :class="{ 'teacher-dropdown_active': teacherActive} "
+                                )
+                                    .teacher-dropdown__close(
+                                        @click="hideTeachers"
+                                    )
+                                    .teacher-dropdown__content
+                                        - var x = 3;
+                                        - for (var i=1; i<=x; i++) {
+                                            .teacher-dropdown__row
+                                                .teacher-dropdown__image
+                                                    img.teacher-dropdown__img(
+                                                        src="../images/teacher_drop.png",
+                                                        alt=""
+                                                    )
+                                                .teacher-dropdown__name Samuel-Hopkins
+                                        - }
+                                        
+                    .title-wrap
+                        .title-wrap__label 
+                            |Teacher course 
+                            br
+                            |leads
+                    .course-info
+                        each name, key in names
+                            - var key2 = key + 1;
+                            .course-info__item
+                                .course-info__icon
+                                    img.course-info__img(
+                                        src='../images/info_'+key2+'.svg', alt=""
+                                    )
+                                .course-info__name=name
+                                .course-info__count 15
+                    a.courses__link(
+                        href=""
+                    ) Registration
+            .courses__col.col-md-6.col-xl-3
+                .courses__item
+                    .courses__wrap  
+                        .courses__image
+                            img.courses__img(
+                                src="../images/courses_1.jpg", alt=""
+                            )
+                        .courses__body
+                            h3.courses__label Arbitration process
+                            p.courses__text It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+                    .teacher-block
+                        .teacher-block__wrap
+                            - var x = 3;
+                            - for (var i=1; i<=x; i++) {
+                                .teacher-block__photo
+                                    img(
+                                        src='../images/teacher_'+ i +'.png', alt=""
+                                    )
+                            - }
+                    .title-wrap
+                        .title-wrap__label Сourse leads
+                        h4.title-wrap__text Jenny Doe, John Mark, Mark John
+                    .course-info
+                        each name, key in names
+                            - var key2 = key + 1;
+
+                            .course-info__item
+                                .course-info__icon
+                                    img.course-info__img(
+                                        src='../images/info_'+key2+'.svg', alt=""
+                                    )
+                                .course-info__name=name
+                                .course-info__count 15
+                    a.courses__link(
+                        href=""
+                    ) Registration
+            .courses__col.col-md-6.col-xl-3
+                .courses__item
+                    .courses__wrap  
+                        .courses__image
+                            img.courses__img(
+                                src="../images/courses_2.jpg", alt=""
+                            )
+                        .courses__body
+                            h3.courses__label Arbitration process
+                            p.courses__text It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+                    .teacher-block
+                        .teacher-block__wrap
+                            - var x = 1;
+                            - for (var i=1; i<=x; i++) {
+                                .teacher-block__photo
+                                    img(
+                                        src='../images/teacher_'+ i +'.png', alt=""
+                                    )
+                            - }
+                    .title-wrap
+                        .title-wrap__label Сourse leads
+                        h4.title-wrap__text Jenny Doe
+                    .course-info
+                        each name, key in names
+                            - var key2 = key + 1;
+                            .course-info__item
+                                .course-info__icon
+                                    img.course-info__img(
+                                        src='../images/info_'+key2+'.svg', alt=""
+                                    )
+                                .course-info__name=name
+                                .course-info__count 15
+                    a.courses__link(
+                        href=""
+                    ) Registration
+            .courses__col.courses__col_ar.col-md-6.col-xl-3
+                .courses__item
+                    .courses__wrap  
+                        .courses__image
+                            img.courses__img(
+                                src="../images/courses_1.jpg", alt=""
+                            )
+                        .courses__body
+                            h3.courses__label Arbitration process
+                            p.courses__text It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+                    .teacher-block
+                        .teacher-block__wrap
+                            - var x = 1;
+                            - for (var i=1; i<=x; i++) {
+                                .teacher-block__photo
+                                    img(
+                                        src='../images/teacher_'+ i +'.png', alt=""
+                                    )
+                            - }
+                    .title-wrap.title-wrap_ar
+                        .title-wrap__label.title-wrap__label_ar الإمام
+                        h4.title-wrap__text.title-wrap__text_ar عبد العزيز بن داخل المطيري
+                    .course-info.course-info_ar
+                        .course-info__item
+                            .course-info__icon
+                                img.course-info__img(
+                                    src='../images/info1_2.png', alt=""
+                                )
+                            .course-info__name دروس
+                            .course-info__count 15
+                        .course-info__item
+                            .course-info__icon
+                                img.course-info__img(
+                                    src='../images/info2_2.png', alt=""
+                                )
+                            .course-info__name مسجل
+                            .course-info__count 15
+                        .course-info__item
+                            .course-info__icon
+                                img.course-info__img(
+                                    src='../images/info3_2.png', alt=""
+                                )
+                            .course-info__name يدرسون الآن
+                            .course-info__count 15
+                        .course-info__item
+                            .course-info__icon
+                                img.course-info__img(
+                                    src='../images/info4_2.png', alt=""
+                                )
+                            .course-info__name نجاح
+                            .course-info__count 15
+                    a.courses__link.courses__link_ar(
+                        href=""
+                    ) تسجيل
+            .courses__col.col-md-6.col-xl-3
+                .courses__item
+                    .courses__wrap  
+                        .courses__image
+                            img.courses__img(
+                                src="../images/courses_3.jpg", alt=""
+                            )
+                        .courses__body
+                            h3.courses__label Arbitration process
+                            p.courses__text It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+                    .teacher-block
+                        .teacher-block__wrap
+                            - var x = 3;
+                            - for (var i=1; i<=x; i++) {
+                                .teacher-block__photo
+                                    img(
+                                        src='../images/teacher_'+ i +'.png', alt=""
+                                    )
+                            - }
+                    .title-wrap
+                        .title-wrap__label Сourse leads
+                        h4.title-wrap__text Jenny Doe, John Mark, Mark John
+                    .course-info
+                        each name, key in names
+                            - var key2 = key + 1;
+                            .course-info__item
+                                .course-info__icon
+                                    img.course-info__img(
+                                        src='../images/info_'+key2+'.svg', alt=""
+                                    )
+                                .course-info__name=name
+                                .course-info__count 15
+                    a.courses__link(
+                        href=""
+                    ) Registration
+            .courses__col.col-md-6.col-xl-3
+                .courses__item
+                    .courses__wrap  
+                        .courses__image
+                            img.courses__img(
+                                src="../images/courses_1.jpg", alt=""
+                            )
+                        .courses__body
+                            h3.courses__label Arbitration process
+                            p.courses__text It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+                    .teacher-block
+                        .teacher-block__wrap
+                            - var x = 3;
+                            - for (var i=1; i<=x; i++) {
+                                .teacher-block__photo
+                                    img(
+                                        src='../images/teacher_'+ i +'.png', alt=""
+                                    )
+                            - }
+                    .title-wrap
+                        .title-wrap__label Сourse leads
+                        h4.title-wrap__text Jenny Doe, John Mark, Mark John
+                    .course-info
+                        each name, key in names
+                            - var key2 = key + 1;
+                            .course-info__item
+                                .course-info__icon
+                                    img.course-info__img(
+                                        src='../images/info_'+key2+'.svg', alt=""
+                                    )
+                                .course-info__name=name
+                                .course-info__count 15
+                    a.courses__link(
+                        href=""
+                    ) Registration
+            .courses__col.col-md-6.col-xl-3
+                .courses__item
+                    .courses__wrap  
+                        .courses__image
+                            img.courses__img(
+                                src="../images/courses_2.jpg", alt=""
+                            )
+                        .courses__body
+                            h3.courses__label Arbitration process
+                            p.courses__text It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+                    .teacher-block
+                        .teacher-block__wrap
+                            - var x = 2;
+                            - for (var i=1; i<=x; i++) {
+                                .teacher-block__photo
+                                    img(
+                                        src='../images/teacher_'+ i +'.png', alt=""
+                                    )
+                            - }
+                    .title-wrap
+                        .title-wrap__label Сourse leads
+                        h4.title-wrap__text Jenny Doe, John Mark
+                    .course-info
+                        each name, key in names
+                            - var key2 = key + 1;
+                            .course-info__item
+                                .course-info__icon
+                                    img.course-info__img(
+                                        src='../images/info_'+key2+'.svg', alt=""
+                                    )
+                                .course-info__name=name
+                                .course-info__count 15
+                    a.courses__link(
+                        href=""
+                    ) Registration
+            .courses__col.col-md-6.col-xl-3
+                .courses__item
+                    .courses__wrap  
+                        .courses__image
+                            img.courses__img(
+                                src="../images/courses_3.jpg", alt=""
+                            )
+                        .courses__body
+                            h3.courses__label Arbitration process
+                            p.courses__text It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+                    .teacher-block
+                        .teacher-block__wrap
+                            - var x = 3;
+                            - for (var i=1; i<=x; i++) {
+                                .teacher-block__photo
+                                    img(
+                                        src='../images/teacher_'+ i +'.png', alt=""
+                                    )
+                            - }
+                    .title-wrap
+                        .title-wrap__label Сourse leads
+                        h4.title-wrap__text Jenny Doe, John Mark, Jenny Doe
+                    .course-info
+                        each name, key in names
+                            - var key2 = key + 1;
+                            .course-info__item
+                                .course-info__icon
+                                    img.course-info__img(
+                                        src='../images/info_'+key2+'.svg', alt=""
+                                    )
+                                .course-info__name=name
+                                .course-info__count 15
+                    a.courses__link(
+                        href=""
+                    ) Registration
+        .courses__footer
+            include ../pager.pug
+
+                        
+
+
+    
